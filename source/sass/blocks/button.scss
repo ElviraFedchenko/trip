@@ -1,13 +1,16 @@
-.btn {
+.button {
   display: inline-flex;
   padding: 10px 20px;
-
+  font-family: $montserrat;
   color: $color-default-white;
-
-  background-color: $color-neon-blue;
+  justify-content: center;
+  justify-content: center;
+  background-color: $color-navy-blue;
   border: none;
   cursor: pointer;
-
+  font-size: 16px;
+  line-height: 16px;
+  font-weight: 500;
   transition: opacity $trans-default;
 
   &--red {
