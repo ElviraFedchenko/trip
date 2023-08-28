@@ -1,0 +1,45 @@
+.media {
+  position: absolute;
+  left: auto;
+  top: 30%;
+  right: 120px;
+
+  &__button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: $color-default-white;
+    border-radius: 50%;
+    width: 56px;
+    height: 56px;
+    cursor: pointer;
+
+    svg {
+      transform: translate(-14%, -5%);
+    }
+
+    &:hover circle {
+      stroke: $color-resolution-blue;
+      fill-opacity: 0;
+    }
+
+    &:hover path {
+      stroke: $color-default-black;
+      stroke-opacity: 1;
+    }
+
+    &:active {
+      color: $color-resolution-blue;
+    }
+
+    &:active circle {
+      fill-opacity: 1;
+    }
+
+    &:active path {
+      stroke: $color-default-white;
+      stroke-opacity: 0;
+    }
+  }
+}

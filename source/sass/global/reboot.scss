@@ -46,8 +46,50 @@ video {
   height: auto;
 }
 
+a {
+  color: $color-default-black;
+  text-decoration: none;
+}
+
+p {
+  margin: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
 textarea {
   resize: none;
+}
+
+h2 {
+  margin: 0;
+  font-family: $montserrat;
+  font-weight: 800;
+  font-size: 77px;
+  line-height: 77px;
+  color: $color-default-white;
+  padding-bottom: 25px;
+  z-index: 3;
+
+  @include tablet-width {
+    font-size: 56px;
+    line-height: 56px;
+    text-align: center;
+  }
+
+  @include mobile-width {
+    font-size: 30px;
+    line-height: 30px;
+  }
 }
 
 // chrome autofill background removal

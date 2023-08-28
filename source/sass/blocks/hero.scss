@@ -1,0 +1,142 @@
+.hero {
+  background-color: $color-navy-blue;
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__text-wrapper {
+    max-width: 45%;
+  }
+
+  &__description {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: $color-san-marino;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 80px 120px;
+
+    p {
+      font-family: $montserrat;
+      font-size: 17px;
+      line-height: 24px;
+      font-weight: 400;
+      color: $color-default-white;
+      padding-bottom: 35px;
+    }
+  }
+
+  &__desc {
+    display: flex;
+    margin-top: 10%;
+
+    svg {margin-right: 4px;}
+
+    span {
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 16px;
+      color: $color-default-white;
+      padding: 13px 20px;
+      border: 1px solid rgba(255, 255, 255, 0.5);
+      margin-right: 10px;
+    }
+  }
+
+  &__description--kavkaz {
+    background-image: $gradient-dark-bacground, url("../../img/background/сaucasus-bg.webp");
+
+
+    @media (min-resolution: 2dppx) {
+      background-image: $gradient-dark-bacground, url("../../img/background/сaucasus-bg.webp");
+    }
+
+    @include tablet-width {
+      background-image: $gradient-dark-bacground, url("../../img/background/сaucasus-bg-tablet.webp");
+
+      @media (min-resolution: 2dppx) {
+        background-image: $gradient-dark-bacground, url("../../img/background/сaucasus-bg-tablet.webp");
+      }
+    }
+
+    @include mobile-width {
+      background-image: $gradient-dark-bacground, url("../../img/background/сaucasus-bg-mobile.webp");
+
+      @media (min-resolution: 2dppx) {
+        background-image: $gradient-dark-bacground, url("../../img/background/сaucasus-bg-mobile.webp");
+      }
+    }
+  }
+
+  &__description--kamchatka {
+    background-image: $gradient-dark-bacground, url("../../img/background/kamchatka-bg.webp");
+
+
+    @media (min-resolution: 2dppx) {
+      background-image: $gradient-dark-bacground, url("../../img/background/kamchatka-bg.webp");
+    }
+
+    @include tablet-width {
+      background-image: $gradient-dark-bacground, url("../../img/background/kamchatka-bg-tablet.webp");
+
+      @media (min-resolution: 2dppx) {
+        background-image: $gradient-dark-bacground, url("../../img/background/kamchatka-bg-tablet.webp");
+      }
+    }
+
+    @include mobile-width {
+      background-image: $gradient-dark-bacground, url("../../img/background/kamchatka-bg-mobile.webp");
+
+      @media (min-resolution: 2dppx) {
+        background-image: $gradient-dark-bacground, url("../../img/background/kamchatka-bg-mobile.webp");
+      }
+    }
+  }
+
+  &__description--altai {
+    background-image: $gradient-dark-bacground, url("../../img/background/altai-bg.webp");
+
+
+    @media (min-resolution: 2dppx) {
+      background-image: $gradient-dark-bacground, url("../../img/background/altai-bg.webp");
+    }
+
+    @include tablet-width {
+      background-image: $gradient-dark-bacground, url("../../img/background/altai-bg-tablet.webp");
+
+      @media (min-resolution: 2dppx) {
+        background-image: $gradient-dark-bacground, url("../../img/background/altai-bg-tablet.webp");
+      }
+    }
+
+    @include mobile-width {
+      background-image: $gradient-dark-bacground, url("../../img/background/altai-bg-mobile.webp");
+
+      @media (min-resolution: 2dppx) {
+        background-image: $gradient-dark-bacground, url("../../img/background/kamchatka-bg-mobile.webp");
+      }
+    }
+  }
+
+  &__toggle {
+    width: 20%;
+    padding: 22px;
+  }
+
+  &__photo {
+    position: absolute;
+    left: auto;
+    top: 30%;
+    right: 120px;
+    height: auto;
+  }
+
+  &__photo-cards {
+    position: relative;
+    top: -99px;
+  }
+}
