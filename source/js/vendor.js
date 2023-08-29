@@ -78,14 +78,14 @@ const initToursSwiper = () => {
       // Количество пролистываемых слайдов
       // slidesPerGroup: 1,
       // Бесконечный слайдер
-      loop: true,
+      loop: false,
 
       // // Автопрокрутка
       // autoplay: {
       //   // Пауза между прокруткой в мс
       //   delay: 1000,
       //   // Закончить на последнем слайде
-      //   stopOnLastSlide: true,
+      // stopOnLastSlide: true,
       //   // Отключить после ручного переключения
       //   disableOnInteraction: false,
       // },
@@ -102,11 +102,11 @@ const initToursSwiper = () => {
         },
         767: {
           slidesPerView: 2,
-          spaceBetween: 30,
+          spaceBetween: 18,
         },
         1199: {
           slidesPerView: 3,
-          spaceBetween: 40,
+          spaceBetween: 30,
           slidesPerGroup: 1,
         },
       },

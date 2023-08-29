@@ -36,7 +36,14 @@
           <h2>Пример</h2>
           <ol>
             <li>
-              <a href="index.html">Главная — index.html</a>
+              <a class="footer__logo" href="index.html">
+                <picture>
+                  <source media="(min-width: 1200px)" srcset="img/svg/logo-footer.svg" width="205" height="60">
+                  <source media="(min-width: 768px)" srcset="img/svg/logo-footer.svg" width="118" height="34">
+                  <source media="(min-width: 320px)" srcset="img/svg/logo-footer.svg" width="112" height="34">
+                  <img src="img/svg/logo-footer.svg" width="205" height="60" alt="логотип LifeTour">
+                </picture>
+              </a>
             </li>
             <li>
               <a href="#">Название страницы (состояние страницы, если отдельное) — ссылка на страницу.</a>
