@@ -102,3 +102,50 @@ window.addEventListener('DOMContentLoaded', function () {
 // breakpointChecker();
 
 // используйте .closest(el)
+const header = document.querySelector('.main-nav');
+const menuList = header.querySelector('.main-nav__inner');
+const menuToggle = header.querySelector('.main-nav__toggle');
+// const mainHeader = document.querySelector('.main-header');
+
+// header.classList.remove('page-header--no-js');
+// mainHeader.classList.remove('main-header--no-js');
+// menuList.classList.remove('nav--no-js');
+// menuToggle.classList.remove('page-header__toggle--no-js');
+
+const onNavOutsideClick = (evt) => {
+  if (!evt.target.closest('.main-nav__list')) {
+    closeMenu();
+  }
+};
+
+const onNaVLinkCloseMenu = (evt) => {
+  if (!evt.target.closest('.main-nav__link')) {
+    return;
+  }
+  closeMenu();
+};
+
+function closeMenu() {
+  menuList.classList.remove('main-nav__inner--is-active');
+  header.classList.remove('main-nav--is-active');
+  menuToggle.classList.remove('main-nav__toggle--is-active');
+  window.scrollLock.enableScrolling();
+  menuList.removeEventListener('click', onNaVLinkCloseMenu);
+  menuList.removeEventListener('click', onNavOutsideClick);
+  menuToggle.removeEventListener('click', closeMenu);
+}
+
+const openMenu = () => {
+  if (!menuToggle) {
+    return;
+  }
+  header.classList.add('main-nav--is-active');
+  menuToggle.classList.add('main-nav__toggle--is-active');
+  menuList.classList.add('main-nav__inner--is-active');
+  window.scrollLock.disableScrolling();
+  menuList.addEventListener('click', onNaVLinkCloseMenu);
+  menuList.addEventListener('click', onNavOutsideClick);
+  menuToggle.addEventListener('click', closeMenu);
+};
+
+menuToggle.addEventListener('click', openMenu);
