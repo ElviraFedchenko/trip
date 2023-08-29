@@ -18,7 +18,7 @@
   font-style: normal;
 }
 :root {
-  --swiper-theme-color: #007aff;
+  --swiper-theme-color: #fff;
 }
 .swiper {
   margin-left: auto;
@@ -179,6 +179,17 @@
   --swiper-navigation-color: var(--swiper-theme-color);
   */
 }
+
+
+.swiper-button {
+  width: 37px;
+  height: 35px;
+  border: 0;
+  background-color: #0266c1;
+  color: #fff;
+  top: 23px;
+}
+
 .swiper-button-prev,
 .swiper-button-next {
   position: absolute;
@@ -202,7 +213,6 @@
 .swiper-button-prev:after,
 .swiper-button-next:after {
   font-family: swiper-icons;
-  font-size: var(--swiper-navigation-size);
   text-transform: none !important;
   letter-spacing: 0;
   text-transform: none;
@@ -258,7 +268,7 @@
 .swiper-pagination-custom,
 .swiper-horizontal > .swiper-pagination-bullets,
 .swiper-pagination-bullets.swiper-pagination-horizontal {
-  bottom: 10px;
+  bottom: 30px;
   left: 0;
   width: 100%;
 }
@@ -290,11 +300,11 @@
   transform: scale(0.33);
 }
 .swiper-pagination-bullet {
-  width: var(--swiper-pagination-bullet-width, var(--swiper-pagination-bullet-size, 8px));
-  height: var(--swiper-pagination-bullet-height, var(--swiper-pagination-bullet-size, 8px));
+  width: var(--swiper-pagination-bullet-width, var(--swiper-pagination-bullet-size, 10px));
+  height: var(--swiper-pagination-bullet-height, var(--swiper-pagination-bullet-size, 10px));
   display: inline-block;
   border-radius: 50%;
-  background: var(--swiper-pagination-bullet-inactive-color, #000);
+  background: var(--swiper-pagination-bullet-inactive-color, #fff);
   opacity: var(--swiper-pagination-bullet-inactive-opacity, 0.2);
 }
 button.swiper-pagination-bullet {
@@ -611,4 +621,38 @@ button.swiper-pagination-bullet {
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
   overflow: hidden;
+}
+
+.swiper-pagination.swiper-pagination-bullets {
+  width: fit-content;
+  right: 115px;
+  left: auto;
+  bottom: 60px;
+
+  @media (max-width: 1199px) {
+    width: 100%;
+    left: 0;
+    right: 32px;
+    bottom: 80px;
+  }
+}
+
+.swiper-pagination.swiper-pagination-bullets .swiper-pagination-bullet {
+  border: 1px solid #fff;
+  width: 10px;
+  height: 10px;
+  background: 0 0;
+  opacity: 1;
+  margin: 8px;
+
+  @media (max-width: 767px) {
+    width: 8px;
+    height: 8px;
+    margin: 6px;
+  }
+}
+
+.swiper-pagination.swiper-pagination-bullets .swiper-pagination-bullet-active {
+  border: 1px solid #fff;
+  background: #fff;
 }

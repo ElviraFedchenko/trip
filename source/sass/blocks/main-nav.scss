@@ -1,22 +1,23 @@
 .main-nav {
+  position: absolute;
   font-family: $montserrat;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  background-color: #0266C1;
-  padding: 40px 120px 0 120px ;
+  background-color: transparent;
+  padding: 40px 120px 0 120px;
+  z-index: 3;
+  width: 100%;
 
   @include tablet-width {
-    padding-top: 30px;
-    padding-bottom: 100px;
+    padding: 30px 35px 100px 45px;
   }
 
   @include mobile-width {
     display: grid;
     grid-template-columns: 30px 110px;
     grid-template-rows: min-content min-content;
-    padding-top: 15px;
-    padding-bottom: 70px;
+    padding: 15px 15px 70px 15px;
   }
 
 
@@ -37,6 +38,11 @@
   &__logo {
     @include tablet-width {
       order: 2;
+      margin-left: 119px;
+    }
+
+    @include mobile-width {
+      margin: 0;
     }
   }
 
@@ -56,18 +62,19 @@
     font-weight: 600;
     font-size: 18px;
     line-height: 18px;
-    padding: 23px 10px;
+    padding: 25px 10px 20px;
 
     @include tablet-width {
       font-size: 16px;
       line-height: 16px;
       order: 3;
+      padding: 15px 10px 10px;
     }
 
     @include mobile-width {
       font-size: 14px;
       line-height: 14px;
-      padding: 14px 10px;
+      padding: 14px 0;
       grid-area: 2 / 2 / 2 / 2;
     }
   }
@@ -86,6 +93,12 @@
       border: 0;
       cursor: pointer;
       order: 1;
+      align-self: flex-start;
+      margin-top: 10px;
+    }
+
+    @include mobile-width {
+      margin: 0;
     }
   }
 }

@@ -1,0 +1,269 @@
+.tours {
+
+  &__container {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  &__wrapper {
+    position: relative;
+    width: 100%;
+    padding-top: 119px;
+    padding-bottom: 52px;
+
+    @include tablet-width {
+      padding-top: 85px;
+      padding-bottom: 50px;
+    }
+
+    @include mobile-width {
+      padding-top: 66px;
+      padding-bottom: 29px;
+    }
+  }
+
+  &__slider h2 {
+    @include mobile-width {
+      display: grid;
+      grid-template-columns: 1fr 78px;
+      ;
+    }
+  }
+
+  &__slider h2::after {
+    content: "Ближайшие туры";
+    font-size: 55px;
+    color: rgba(45, 56, 63, 0.03);
+    margin-left: -344px;
+
+    @include tablet-width {
+      font-size: 40px;
+      margin-left: -246px;
+    }
+
+    @include mobile-width {
+      font-size: 26px;
+      margin-left: -216px;
+    }
+  }
+
+  &__inner {
+    padding-top: 57px;
+
+    @include tablet-width {
+      padding-top: 46px;
+    }
+
+    @include mobile-width {
+      padding-top: 28px;
+    }
+  }
+
+  &__card-wrapper {
+    width: 100%;
+    aspect-ratio: 380/412;
+    position: relative;
+    color: $color-default-white;
+    font-size: 12px;
+    font-weight: 500;
+
+    @include tablet-width {
+      aspect-ratio: 324/412;
+    }
+
+    @include mobile-width {
+      aspect-ratio: 290/412;
+      max-width: 290px;
+      margin: 0 auto;
+    }
+
+    &::before {
+      content: "";
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(0deg, rgba(0, 0, 0, 0.6) 61.9%, transparent 100%);
+      z-index: -1;
+    }
+  }
+
+  &__photo {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -2;
+    overflow: hidden;
+
+    @include mobile-width {
+      width: 380px;
+      height: 412px;
+    }
+  }
+
+  &__card-inner {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 28px 20px;
+
+    h3 {
+      margin: 0;
+      padding: 23px 0 17px;
+      font-size: 24px;
+      line-height: 28px;
+      font-weight: 700;
+      width: 80%;
+
+      @include tablet-width {
+        width: 100%;
+      }
+
+      @include mobile-width {
+        padding: 15px 0;
+        font-size: 20px;
+        line-height: 24px;
+      }
+    }
+  }
+
+  &__top,
+  &__bottom {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  &__top {
+    @include mobile-width {
+      row-gap: 15px;
+      justify-content: flex-start;
+      column-gap: 16px;
+    }
+  }
+
+  &__bottom {
+    padding-top: 20px;
+
+    @include mobile-width {
+      padding-top: 15px;
+    }
+  }
+
+  &__pin {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 108px;
+    align-self: center;
+    background-color: $color-navy-blue;
+    padding: 7px;
+    gap: 6px;
+
+    @include mobile-width {
+      order: 1;
+    }
+  }
+
+  &__bar,
+  &__feature {
+    width: fit-content;
+    display: flex;
+  }
+
+  &__bar {
+    gap: 13px;
+    align-items: center;
+  }
+
+  &__feature {
+    flex-direction: column;
+    position: relative;
+
+    &:first-child::before {
+      content: "";
+      position: absolute;
+      top: -20px;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background-color: rgba(255, 255, 255, 0.2);
+    }
+  }
+
+  &__card-value {
+    font-size: 13px;
+    font-weight: 700;
+
+    @include mobile-width {
+      font-size: 12px;
+    }
+
+    svg {
+      @include mobile-width {
+        width: 12.1px;
+        height: 12px;
+      }
+    }
+  }
+
+  &__link {
+    width: fit-content;
+    padding: 10px 0;
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #2d383f;
+    display: grid;
+    grid-template-columns: 1fr 12px;
+    gap: 12px;
+    align-self: center;
+  }
+
+  &__bg-hills {
+    width: 1431px;
+    height: 1424px;
+    left: 58.2%;
+    position: absolute;
+    z-index: -3;
+    bottom: -449px;
+
+    @include tablet-width {
+      width: 602px;
+      height: 1364px;
+      left: 62.72%;
+      bottom: -374px;
+    }
+
+    @include mobile-width {
+      width: 346px;
+      height: 595px;
+      bottom: 238px;
+      left: 45%;
+      right: auto;
+    }
+  }
+
+  &__bg-clouds {
+    position: absolute;
+    z-index: -3;
+    left: auto;
+    right: 68%;
+    bottom: 158px;
+
+    @include tablet-width {
+      display: none;
+    }
+  }
+
+  &__button {
+    top: 146px;
+  }
+}

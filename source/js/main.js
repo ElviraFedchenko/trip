@@ -1,7 +1,7 @@
 import {iosVhFix} from './utils/ios-vh-fix';
 import {initModals} from './modules/modals/init-modals';
 import {Form} from './modules/form-validate/form';
-import {initHeroSwiper} from './vendor.js';
+import {initHeroSwiper, initToursSwiper} from './vendor.js';
 
 // ---------------------------------
 
@@ -12,6 +12,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
   iosVhFix();
   initHeroSwiper();
+  initToursSwiper();
 
   // Modules
   // ---------------------------------
@@ -26,6 +27,57 @@ window.addEventListener('DOMContentLoaded', () => {
   });
 });
 
+window.addEventListener('DOMContentLoaded', function () {
+  let video = document.querySelector('.media');
+
+  function setupVideo() {
+    let link = video.querySelector('.media__link');
+    let button = video.querySelector('.media__button');
+    video.addEventListener('click', function () {
+      let iframe = createIframe();
+      link.remove();
+      button.remove();
+      video.appendChild(iframe);
+    });
+    video.classList.add('media__video--enabled');
+  }
+
+  function createIframe() {
+    let iframe = document.createElement('iframe');
+    iframe.setAttribute('allowfullscreen', '');
+    iframe.setAttribute('allow', 'autoplay');
+    iframe.setAttribute('src', 'https://www.youtube.com/embed/9TZXsZItgdw');
+    iframe.classList.add('media__content');
+    return iframe;
+  }
+
+  setupVideo();
+});
+
+window.addEventListener('DOMContentLoaded', function () {
+  let audio = document.querySelector('.audio');
+
+  function setupAudio() {
+    let button = audio.querySelector('.audio__button-play');
+    audio.addEventListener('click', function () {
+      let iframe = createIframe();
+      button.remove();
+      audio.appendChild(iframe);
+    });
+    audio.classList.add('.audio__wrapper--enabled');
+  }
+
+  function createIframe() {
+    let iframe = document.createElement('iframe');
+    iframe.setAttribute('allowfullscreen', '');
+    iframe.setAttribute('allow', 'autoplay');
+    iframe.setAttribute('src', 'https://music.yandex.ru/album/25474374?dir=desc&activeTab=track-list');
+    iframe.classList.add('.audio__content');
+    return iframe;
+  }
+
+  setupAudio();
+});
 // ---------------------------------
 
 // ❗❗❗ обязательно установите плагины eslint, stylelint, editorconfig в редактор кода.
