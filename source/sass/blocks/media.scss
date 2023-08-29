@@ -1,15 +1,51 @@
 .media {
   position: absolute;
   left: auto;
-  top: 30%;
+  top: 37%;
   right: 120px;
+  width: 482px;
+  height: 317px;
+
+  @include tablet-width {
+    position: relative;
+    width: 442px;
+    height: 300px;
+    margin-left: 35%;
+    top: 0%;
+  }
+
+  @include mobile-width {
+    display: none;
+  }
+
+  &__wrapper {
+    @include tablet-width {
+      position: relative;
+    }
+  }
+
+  &__video--enabled {
+    display: block;
+
+    @include mobile-width {
+      display: none;}
+  }
+
+  &__content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
 
   &__button {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: $color-default-white;
+    color: transparent;
     border-radius: 50%;
     width: 56px;
     height: 56px;

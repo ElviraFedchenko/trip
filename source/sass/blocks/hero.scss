@@ -4,10 +4,46 @@
   &__text {
     display: flex;
     flex-direction: column;
+    width: 100%;
+
+    @include tablet-width {
+      align-items: center;
+    }
+
+    h2 {
+      margin: 0;
+      font-family: $montserrat;
+      font-weight: 800;
+      font-size: 77px;
+      line-height: 77px;
+      color: $color-default-white;
+      padding-bottom: 25px;
+      z-index: 3;
+
+      @include tablet-width {
+        font-size: 56px;
+        line-height: 56px;
+        text-align: center;
+        padding-bottom: 15px;
+      }
+
+      @include mobile-width {
+        font-size: 30px;
+        line-height: 30px;
+      }
+    }
   }
 
   &__text-wrapper {
     max-width: 45%;
+
+    @include tablet-width {
+      max-width: 68%;
+    }
+
+    @include mobile-width {
+      max-width: 98%;
+    }
   }
 
   &__description {
@@ -18,7 +54,17 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    padding: 80px 120px;
+    padding: 160px 120px 80px 120px;
+    height: auto;
+
+    @include tablet-width {
+      padding: 23.66% 45px 29%;
+      align-items: center;
+    }
+
+    @include mobile-width {
+      padding: 174px 15px 80px 15px;
+    }
 
     p {
       font-family: $montserrat;
@@ -27,6 +73,10 @@
       font-weight: 400;
       color: $color-default-white;
       padding-bottom: 35px;
+
+      @include tablet-width {
+        text-align: center;
+      }
     }
   }
 
@@ -34,7 +84,13 @@
     display: flex;
     margin-top: 10%;
 
-    svg {margin-right: 4px;}
+    @include tablet-width {
+      display: none;
+    }
+
+    svg {
+      margin-right: 4px;
+    }
 
     span {
       font-size: 12px;
@@ -125,6 +181,16 @@
   &__toggle {
     width: 20%;
     padding: 22px;
+
+    @include tablet-width {
+      width: 30%;
+      padding: 22px;
+      margin-bottom: 50px;
+    }
+
+    @include mobile-width {
+      width: 62%;
+    }
   }
 
   &__photo {
@@ -133,10 +199,26 @@
     top: 30%;
     right: 120px;
     height: auto;
+
+    @include tablet-width {
+      position: relative;
+      width: 442px;
+      height: 300px;
+      margin-left: 35%;
+      top: 0%;
+    }
+
+    @include mobile-width {
+      display: none;
+    }
   }
 
   &__photo-cards {
     position: relative;
     top: -99px;
+
+    @include tablet-width {
+      top: -20px;
+    }
   }
 }
