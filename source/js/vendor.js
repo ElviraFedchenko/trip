@@ -4,6 +4,7 @@ import './vendor/focus-visible-polyfill';
 
 const heroSwiper = document.querySelector('.hero__slider');
 const toursSwiper = document.querySelector('.tours__slider');
+const trainerSwiper = document.querySelector('.training__slider');
 
 const initHeroSwiper = () => {
   if (heroSwiper) {
@@ -114,5 +115,63 @@ const initToursSwiper = () => {
     });
   }
 };
+const initTrainerSwiper = () => {
+  if (trainerSwiper) {
+    const swiper = new Swiper(trainerSwiper, {
 
-export {initHeroSwiper, initToursSwiper};
+      // Navigation arrows
+      navigation: {
+        nextEl: '.training__button--next',
+        prevEl: '.training__button--prev',
+      },
+      // Включение/Отключение перетаскивания на ПК
+      simulateTouch: false,
+      // Курсор перетаскивания
+      grabCursor: false,
+      // Количество слайдов для показа
+      // slidesPerView: 4,
+      // Отключение функционала, если слайдов меньше чем нужно
+      watchOverflow: true,
+      // Отступ между слайдами
+      // spaceBetween: 39,
+      // Количество пролистываемых слайдов
+      // slidesPerGroup: 1,
+      // Бесконечный слайдер
+      loop: false,
+
+      // // Автопрокрутка
+      // autoplay: {
+      //   // Пауза между прокруткой в мс
+      //   delay: 1000,
+      //   // Закончить на последнем слайде
+      // stopOnLastSlide: true,
+      //   // Отключить после ручного переключения
+      //   disableOnInteraction: false,
+      // },
+
+      // Скорость прокрутки - по умолчанию 300мс
+      speed: 600,
+
+      // //Брейкпоинты (адаптив)
+      // //Ширина экрана
+      breakpoints: {
+        320: {
+          slidesPerView: 1,
+          spaceBetween: 10,
+        },
+        767: {
+          slidesPerView: 3,
+          spaceBetween: 10,
+        },
+        1199: {
+          slidesPerView: 4,
+          spaceBetween: 10,
+          slidesPerGroup: 1,
+        },
+      },
+
+    });
+  }
+};
+
+export {initHeroSwiper, initToursSwiper, initTrainerSwiper};

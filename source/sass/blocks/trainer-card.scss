@@ -1,0 +1,60 @@
+.trainer-card {
+  display: flex;
+  height: 100%;
+
+  &__wrapper {
+    margin: 10px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background: $color-default-white;
+    box-shadow: 0 0 10px 0 rgba(28, 51, 116, 0.1);
+    min-height: 377px;
+
+    @include tablet-width {
+      margin: 10px auto;
+      width: 206px;
+      min-height: 411px;
+      padding: 15px;
+    }
+
+    @include mobile-width {
+      max-width: 290px;
+      width: unset;
+      min-height: 385px;
+      padding: 20px;
+    }
+
+    p {
+      padding: 0;
+      margin: 0;
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 16px;
+      max-width: 100%;
+    }
+  }
+
+  &__photo {
+    width: 100%;
+    height: auto;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  &__inner {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0 14px;
+
+    h4 {
+      max-width: 50%;
+      padding: 0;
+    }
+  }
+}
