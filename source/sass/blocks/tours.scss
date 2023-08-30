@@ -274,21 +274,21 @@
     left: 58.2%;
     position: absolute;
     z-index: -3;
-    bottom: -449px;
+    top: 739px;
 
     @include tablet-width {
       width: 602px;
       height: 1364px;
-      left: 62.72%;
-      bottom: -374px;
+      left: 61.72%;
+      top: 962px;
     }
 
     @include mobile-width {
       width: 346px;
       height: 595px;
-      bottom: 238px;
+      top: 792px;
       left: auto;
-      right: -135px;
+      right: -175px;
     }
   }
 
@@ -296,8 +296,8 @@
     position: absolute;
     z-index: -3;
     left: auto;
-    right: 68%;
-    bottom: 158px;
+    right: 70%;
+    top: 1211px;
 
     @include tablet-width {
       display: none;

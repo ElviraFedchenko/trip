@@ -1,0 +1,74 @@
+.training {
+  position: relative;
+  padding-top: 113px;
+
+  @include tablet-width {
+    padding-top: 75px;
+  }
+
+  @include mobile-width {
+    padding-top: 56px;
+  }
+
+  & h2::after {
+    content: "Обучение";
+    font-size: 40px;
+    color: rgba(45, 56, 63, 0.03);
+    margin-left: -142px;
+  }
+
+  & p {
+    max-width: 74%;
+    padding-top: 33px;
+
+    @include tablet-width {
+      padding-top: 22px;
+      max-width: 86%;
+    }
+
+    @include mobile-width {
+      max-width: 100%;
+      padding-top: 16px;
+      font-size: 14px;
+      line-height: 20px;
+    }
+  }
+
+  & h3 {
+    padding-bottom: 32px;
+    margin: 0;
+
+    @include tablet-width {
+      font-size: 18px;
+      padding-bottom: 22px;
+    }
+
+    @include mobile-width {
+      font-size: 16px;
+      padding-bottom: 22px;
+    }
+  }
+
+  &__slider {
+    padding-top: 56px;
+    padding-bottom: 40px;
+
+    @include mobile-width {
+      padding: 49px 5px 28px;
+    }
+  }
+
+  &__button--next {
+    @include tablet-width {
+      right: 8px;
+      top: 78px;
+    }
+  }
+
+  &__button--prev {
+    @include tablet-width {
+      top: 78px;
+      right: 50px;
+    }
+  }
+}
