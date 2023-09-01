@@ -5,6 +5,8 @@ import './vendor/focus-visible-polyfill';
 const heroSwiper = document.querySelector('.hero__slider');
 const toursSwiper = document.querySelector('.tours__slider');
 const trainerSwiper = document.querySelector('.training__slider');
+const reviewSwiper = document.querySelector('.review__slider');
+const advantagesSwiper = document.querySelector('.advantages__slider');
 
 const initHeroSwiper = () => {
   if (heroSwiper) {
@@ -174,4 +176,123 @@ const initTrainerSwiper = () => {
   }
 };
 
-export {initHeroSwiper, initToursSwiper, initTrainerSwiper};
+const initReviewSwiper = () => {
+  if (trainerSwiper) {
+    const swiper = new Swiper(reviewSwiper, {
+
+      // Navigation arrows
+      navigation: {
+        nextEl: '.review__button--next',
+        prevEl: '.review__button--prev',
+      },
+      // Включение/Отключение перетаскивания на ПК
+      simulateTouch: false,
+      // Курсор перетаскивания
+      grabCursor: false,
+      // Количество слайдов для показа
+      // slidesPerView: 4,
+      // Отключение функционала, если слайдов меньше чем нужно
+      watchOverflow: true,
+      // Отступ между слайдами
+      // spaceBetween: 39,
+      // Количество пролистываемых слайдов
+      // slidesPerGroup: 1,
+      // Бесконечный слайдер
+      loop: false,
+
+      // // Автопрокрутка
+      // autoplay: {
+      //   // Пауза между прокруткой в мс
+      //   delay: 1000,
+      //   // Закончить на последнем слайде
+      // stopOnLastSlide: true,
+      //   // Отключить после ручного переключения
+      //   disableOnInteraction: false,
+      // },
+
+      // Скорость прокрутки - по умолчанию 300мс
+      speed: 600,
+
+      // //Брейкпоинты (адаптив)
+      // //Ширина экрана
+      breakpoints: {
+        320: {
+          slidesPerView: 1,
+          spaceBetween: 10,
+        },
+        767: {
+          slidesPerView: 1,
+          spaceBetween: 10,
+        },
+        1199: {
+          slidesPerView: 1,
+          spaceBetween: 10,
+        },
+      },
+
+    });
+  }
+};
+
+const initAdvantagesSwiper = () => {
+  if (trainerSwiper) {
+    const swiper = new Swiper(advantagesSwiper, {
+
+      // Navigation arrows
+      navigation: {
+        nextEl: '.advantages__button--next',
+        prevEl: '.advantages__button--prev',
+      },
+      // Включение/Отключение перетаскивания на ПК
+      simulateTouch: false,
+      // Курсор перетаскивания
+      grabCursor: false,
+      // Количество слайдов для показа
+      // slidesPerView: 4,
+      // Отключение функционала, если слайдов меньше чем нужно
+      watchOverflow: true,
+      // Отступ между слайдами
+      // spaceBetween: 39,
+      // Количество пролистываемых слайдов
+      // slidesPerGroup: 1,
+      // Бесконечный слайдер
+      loop: true,
+
+      // // Автопрокрутка
+      // autoplay: {
+      //   // Пауза между прокруткой в мс
+      //   delay: 1000,
+      //   // Закончить на последнем слайде
+      // stopOnLastSlide: true,
+      //   // Отключить после ручного переключения
+      //   disableOnInteraction: false,
+      // },
+
+      // Скорость прокрутки - по умолчанию 300мс
+      speed: 600,
+
+      // //Брейкпоинты (адаптив)
+      // //Ширина экрана
+      breakpoints: {
+
+        320: {
+          slidesPerView: 5,
+          spaceBetween: 10,
+          loop: false,
+        },
+        767: {
+          slidesPerView: 5,
+          spaceBetween: 10,
+          loop: false,
+        },
+        1199: {
+          slidesPerView: 3,
+          spaceBetween: 30,
+        },
+      },
+
+    });
+  }
+};
+
+export {initHeroSwiper, initToursSwiper, initTrainerSwiper, initReviewSwiper, initAdvantagesSwiper};

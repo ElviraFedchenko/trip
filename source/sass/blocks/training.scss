@@ -15,9 +15,22 @@
     font-size: 40px;
     color: rgba(45, 56, 63, 0.03);
     margin-left: -142px;
+
+    @include tablet-width {
+      font-size: 40px;
+      margin-left: -138px;
+    }
+
+    @include mobile-width {
+      font-size: 26px;
+      font-weight: 800;
+      line-height: 26px;
+      margin-left: -122px;
+    }
   }
 
   & p {
+    color: $color-elephant;
     max-width: 74%;
     padding-top: 33px;
 
