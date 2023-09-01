@@ -1,7 +1,7 @@
 import {iosVhFix} from './utils/ios-vh-fix';
 import {initModals} from './modules/modals/init-modals';
 import {Form} from './modules/form-validate/form';
-import {initHeroSwiper, initToursSwiper, initTrainerSwiper} from './vendor.js';
+import {initHeroSwiper, initToursSwiper, initTrainerSwiper, initReviewSwiper, initAdvantagesSwiper} from './vendor.js';
 
 // ---------------------------------
 
@@ -14,6 +14,8 @@ window.addEventListener('DOMContentLoaded', () => {
   initHeroSwiper();
   initToursSwiper();
   initTrainerSwiper();
+  initReviewSwiper();
+  initAdvantagesSwiper();
 
   // Modules
   // ---------------------------------

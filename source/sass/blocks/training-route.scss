@@ -33,10 +33,10 @@
 
       &::before {
         visibility: visible;
-        height: 70%;
+        height: 79%;
         width: 1px;
-        top: 50px;
-        left: calc(19px + 6px);
+        top: 36px;
+        left: 7px;
       }
     }
   }
@@ -183,6 +183,7 @@
       line-height: 24px;
       align-self: flex-end;
       max-width: 100%;
+      color: $color-elephant;
 
 
       @include mobile-width {
