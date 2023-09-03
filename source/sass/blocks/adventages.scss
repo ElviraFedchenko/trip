@@ -1,13 +1,55 @@
 .advantages {
   padding-top: 113px;
 
+  @include tablet-width {
+    padding: 77px 45px 70px;
+  }
+
+  @include mobile-width {
+    padding: 60px 15px 66px;
+  }
+
   &__slider {
     padding-top: 46px;
     padding-bottom: 85px;
+
+    @include mobile-width {
+      padding-bottom: 0;
+    }
   }
 
   h2 {
     text-align: center;
+
+    &::after {
+      content: "Преимущества";
+      font-size: 55px;
+      color: rgba(45, 56, 63, 0.03);
+      margin-left: -378px;
+
+      @include tablet-width {
+        font-size: 40px;
+        margin-left: -277px;
+      }
+
+      @include mobile-width {
+        font-size: 26px;
+        font-weight: 800;
+        line-height: 26px;
+        margin-left: -206px;
+      }
+    }
+  }
+
+  &__wrapper {
+    @include tablet-width {
+      flex-wrap: wrap;
+      row-gap: 28px;
+      column-gap: 28px;
+      justify-content: center;
+      align-items: stretch;
+      align-content: stretch;
+    }
   }
 
   &__slide {
@@ -15,12 +57,22 @@
     max-width: 380px;
     height: auto;
     min-height: 329px;
-    background-color: #fff;
-    border: 1px solid rgba(2, 102, 193, .1);
+    background-color: $color-default-white;
+    border: 1px solid rgba(2, 102, 193, 0.1);
     padding: 40px 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    @include tablet-width {
+      padding: 30px 20px;
+      min-width: 324px;
+      min-height: auto;
+    }
+
+    @include mobile-width {
+      min-width: 290px;
+    }
 
     h3 {
       font-size: 18px;
@@ -31,9 +83,11 @@
       padding-top: 30px;
 
       @include tablet-width {
+        padding-top: 25px;
         font-size: 16px;
         font-weight: 600;
         line-height: 16px;
+        text-align: center;
       }
 
       @include mobile-width {

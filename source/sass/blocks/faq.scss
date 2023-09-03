@@ -1,0 +1,151 @@
+.faq {
+  position: relative;
+  width: 100%;
+  padding: 0 calc(50% - 489px);
+  padding-top: 21.6%;
+  padding-bottom: 21.3%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  @include tablet-width {
+    padding: 0 calc(50% - 148px);
+    padding-top: 25.3%;
+    padding-bottom: 28.8%;
+  }
+
+
+  @include mobile-width {
+    padding: 0 15px;
+    padding-top: 56.56%;
+    padding-bottom: 54.68%;
+  }
+
+
+  h2 {
+    font-family: $montserrat;
+    color: $color-default-white;
+    font-size: 35px;
+    font-weight: 800;
+    line-height: 35px;
+    padding-bottom: 20px;
+
+    @include tablet-width {
+      font-size: 25px;
+      font-weight: 800;
+      line-height: 25px;
+      padding-bottom: 15px;
+    }
+
+    @include mobile-width {
+      font-size: 22px;
+      font-weight: 800;
+      line-height: 22px;
+      padding-bottom: 14px;
+    }
+  }
+
+  p {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    padding-bottom: 42px;
+    color: $color-default-white;
+
+    @include tablet-width {
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px;
+      padding-bottom: 30px;
+    }
+
+    @include mobile-width {
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 18px;
+      padding-bottom: 26px;
+    }
+  }
+
+  form {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 340px 340px 238px;
+    gap: 30px;
+
+    @include tablet-width {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 7px;
+    }
+  }
+
+  &__image {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+
+    img {
+      object-fit: cover;
+      object-position: center;
+      width: 100%;
+    }
+  }
+
+  &__input {
+    display: flex;
+
+    @include tablet-width {
+      width: 90%;
+    }
+
+    @include tablet-width {
+      width: 100%;
+    }
+  }
+
+
+  &__input label {
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+
+  &__input label input {
+    flex-grow: 1;
+    width: 100%;
+    padding: 22px 30px;
+    line-height: 100%;
+    border: 1px solid rgba(2, 102, 193, 0.1);
+    outline: 0;
+
+    &::placeholder {
+      color: rgba($color-default-black, 0.5);
+    }
+
+    @include tablet-width {
+      font-size: 14px;
+      padding: 15px;
+    }
+  }
+
+  &__button {
+    display: block;
+    width: 100%;
+    padding: 22px 30px;
+
+    @include tablet-width {
+      margin-top: 8px;
+    }
+
+    @include mobile-width {
+      margin-top: 1px;
+    }
+  }
+}

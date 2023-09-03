@@ -155,6 +155,7 @@
       line-height: 28px;
       font-weight: 700;
       width: 80%;
+      color: $color-default-white;
 
       @include tablet-width {
         width: 100%;
