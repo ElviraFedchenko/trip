@@ -7,6 +7,7 @@ const toursSwiper = document.querySelector('.tours__slider');
 const trainerSwiper = document.querySelector('.training__slider');
 const reviewSwiper = document.querySelector('.review__slider');
 const advantagesSwiper = document.querySelector('.advantages__slider');
+const gallerySwiper = document.querySelector('.gallery__slider');
 
 const initHeroSwiper = () => {
   if (heroSwiper) {
@@ -277,12 +278,10 @@ const initAdvantagesSwiper = () => {
 
         320: {
           slidesPerView: 5,
-          spaceBetween: 10,
           loop: false,
         },
         767: {
           slidesPerView: 5,
-          spaceBetween: 10,
           loop: false,
         },
         1199: {
@@ -295,4 +294,63 @@ const initAdvantagesSwiper = () => {
   }
 };
 
-export {initHeroSwiper, initToursSwiper, initTrainerSwiper, initReviewSwiper, initAdvantagesSwiper};
+const initGallerySwiper = () => {
+  if (gallerySwiper) {
+    const swiper = new Swiper(gallerySwiper, {
+
+      // Navigation arrows
+      navigation: {
+        nextEl: '.gallery__button--next',
+        prevEl: '.gallery__button--prev',
+      },
+      // Включение/Отключение перетаскивания на ПК
+      simulateTouch: false,
+      // Курсор перетаскивания
+      grabCursor: false,
+      // Количество слайдов для показа
+      // slidesPerView: 4,
+      // Отключение функционала, если слайдов меньше чем нужно
+      watchOverflow: true,
+      // Отступ между слайдами
+      // spaceBetween: 39,
+      // Количество пролистываемых слайдов
+      // slidesPerGroup: 1,
+      // Бесконечный слайдер
+      loop: true,
+
+      // // Автопрокрутка
+      // autoplay: {
+      //   // Пауза между прокруткой в мс
+      //   delay: 1000,
+      //   // Закончить на последнем слайде
+      // stopOnLastSlide: true,
+      //   // Отключить после ручного переключения
+      //   disableOnInteraction: false,
+      // },
+
+      // Скорость прокрутки - по умолчанию 300мс
+      speed: 600,
+
+      // //Брейкпоинты (адаптив)
+      // //Ширина экрана
+      breakpoints: {
+        320: {
+          slidesPerView: 2,
+          spaceBetween: 5,
+        },
+        767: {
+          slidesPerView: 2,
+          spaceBetween: 5,
+        },
+        1199: {
+          slidesPerView: 5,
+          spaceBetween: 5,
+          slidesPerGroup: 1,
+        },
+      },
+
+    });
+  }
+};
+
+export {initHeroSwiper, initToursSwiper, initTrainerSwiper, initReviewSwiper, initAdvantagesSwiper, initGallerySwiper};

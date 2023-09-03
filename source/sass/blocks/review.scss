@@ -8,6 +8,7 @@
 
   @include mobile-width {
     padding-left: 15px;
+    padding-right: 15px;
   }
 
 
@@ -66,7 +67,6 @@
 
     @include mobile-width {
       max-width: 290px;
-      margin: 10px auto;
       grid-template-columns: 1fr;
       gap: 20px;
     }

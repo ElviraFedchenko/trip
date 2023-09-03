@@ -1,0 +1,124 @@
+.gallery {
+  padding-top: 70px;
+
+  @include mobile-width {
+    padding-top: 0;
+  }
+
+
+  h2 {
+    padding-bottom: 26px;
+    padding-left: 120px;
+
+    @include tablet-width {
+      padding-left: 45px;
+    }
+
+    @include mobile-width {
+      padding-left: 15px;
+      padding-bottom: 15px;
+    }
+
+    &::after {
+      content: "Фотогалерея";
+      font-size: 55px;
+      color: rgba(45, 56, 63, 0.03);
+      margin-left: -252px;
+
+      @include tablet-width {
+        font-size: 40px;
+        margin-left: -181px;
+      }
+
+      @include mobile-width {
+        font-size: 26px;
+        font-weight: 800;
+        line-height: 26px;
+        margin-left: -160px;
+      }
+    }
+  }
+
+  &__slider {
+    p {
+      padding-left: 120px;
+      width: 68%;
+      padding-bottom: 45px;
+      color: $color-elephant;
+
+      @include tablet-width {
+        padding-left: 45px;
+        padding-bottom: 36px;
+      }
+
+      @include mobile-width {
+        width: 100%;
+        padding-left: 15px;
+        padding-bottom: 64px;
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 18px;
+      }
+    }
+  }
+
+  &__slide {
+    display: flex;
+    width: fit-content;
+    height: auto;
+  }
+
+
+  &__img {
+
+    width: 100%;
+    height: 100%;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+
+    &--second {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 5px;
+
+      & picture:first-child img {
+        aspect-ratio: 298 / 179;
+      }
+
+      & picture:nth-child(2) img {
+        aspect-ratio: 298 / 265;
+      }
+
+      @include tablet-width {
+        gap: 3px;
+      }
+    }
+  }
+
+  &__button {
+    top: 33px;
+
+    @include mobile-width {
+      top: 108px;
+    }
+
+    &--prev {
+      right: 160px;
+
+      @include mobile-width {
+        right: 55px;
+      }
+    }
+
+    &--next {
+      right: 120px;
+
+      @include mobile-width {
+        right: 15px;
+      }
+    }
+  }
+}
