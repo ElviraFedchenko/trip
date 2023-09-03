@@ -1,7 +1,7 @@
-import {iosVhFix} from './utils/ios-vh-fix';
-import {initModals} from './modules/modals/init-modals';
-import {Form} from './modules/form-validate/form';
-import {initHeroSwiper, initToursSwiper, initTrainerSwiper, initReviewSwiper, initAdvantagesSwiper, initGallerySwiper} from './vendor.js';
+import { iosVhFix } from './utils/ios-vh-fix';
+import { initModals } from './modules/modals/init-modals';
+import { Form } from './modules/form-validate/form';
+import { initHeroSwiper, initToursSwiper, initTrainerSwiper, initReviewSwiper, initAdvantagesSwiper, initGallerySwiper } from './vendor.js';
 
 // ---------------------------------
 
@@ -153,3 +153,30 @@ const openMenu = () => {
 };
 
 menuToggle.addEventListener('click', openMenu);
+
+
+const map = L.map('map').setView([55.813152, 37.633832], 13);
+
+L.tileLayer(
+  'https://tile.openstreetmap.org/{z}/{x}/{y}.png',
+  { maxZoom: 19,
+    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+  },
+).addTo(map);
+
+
+const mapIcon = L.icon({
+  iconUrl: './img/marker-icon-2x.png',
+  iconSize: [38, 50],
+  iconAnchor: [18, 50],
+});
+
+const marker = L.marker({
+  lat: 55.813152,
+  lng: 37.633832
+}, {
+  draggable: false,
+  icon: mapIcon,
+},
+);
+marker.addTo(map);

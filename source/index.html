@@ -13,13 +13,14 @@
   <link rel="icon" href="img/favicons/ms-icon-310x310.png" type="image/svg+xml">
   <link rel="apple-touch-icon" href="img/favicons/apple-icon-180x180.png">
   <link rel="apple-touch-icon" href="img/favicons/apple-icon-192x192.png">
+  <link rel="manifest" href="./manifest.webmanifest">
   <link rel="preload" href="./fonts/montserrat-v25-cyrillic_latin-300.woff2" as="font" crossorigin="anonymous">
   <link rel="preload" href="./fonts/montserrat-v25-cyrillic_latin-regular.woff2" as="font" crossorigin="anonymous">
   <link rel="preload" href="./fonts/montserrat-v25-cyrillic_latin-600.woff2" as="font" crossorigin="anonymous">
   <link rel="preload" href="./fonts/montserrat-v25-cyrillic_latin-700.woff2" as="font" crossorigin="anonymous">
   <link rel="preload" href="./fonts/montserrat-v25-cyrillic_latin-800.woff2" as="font" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css">
   <link rel="stylesheet" href="css/style.min.css">
-  <link rel="manifest" href="./manifest.webmanifest">
 </head>
 
 <body>
@@ -103,12 +104,12 @@
                         srcset="img/background/video-bg@2x.jpg 2x" alt="Вершина Кавказа" width="482" height="317">
                     </picture>
                   </a>
-                  <button class="media__button" aria-label="Посмотреть видео" tabindex="0">
+                  <div class="media__button" aria-label="Посмотреть видео" tabindex="0">
                     <svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <circle cx="28" cy="28" r="27.5" fill="currentColor" fill-opacity="0.2" stroke="white" />
                       <path d="M37 28L25 17V39L37 28Z" fill="white" stroke="white" stroke-opacity="0" />
                     </svg>
-                  </button>
+                  </div>
                 </div>
               </div>
             </div>
@@ -1452,7 +1453,60 @@
                 адаптировать маршруты к вашим конкретным потребностям и предпочтениям, чтобы вы получили индивидуальный
                 опыт.</p>
             </div>
-
+            <div class="advantages__slide swiper-slide">
+              <span class="advantages__icon">
+                <svg width="20" height="20">
+                  <use xlink:href="img/sprite.svg#leaf"></use>
+                </svg>
+              </span>
+              <h3>Бережное отношение к&nbsp;природе</h3>
+              <p>Уделяем первостепенное внимание охране окружающей среды и гарантируем, что туры оказывают минимальное
+                воздействие на природную среду. Наша компания следует принципу «Не оставлять следов».</p>
+            </div>
+            <div class="advantages__slide swiper-slide">
+              <span class="advantages__icon">
+                <svg width="20" height="20">
+                  <use xlink:href="img/sprite.svg#level-done"></use>
+                </svg>
+              </span>
+              <h3>Безопасность и охрана</h3>
+              <p>Уделяем внимание безопасности клиентов, внедряя строгие процедуры и протоколы безопасности. Имеем планы
+                действий на случай непредвиденных обстоятельств и даем гарантию полной безопасности во время всего тура.
+              </p>
+            </div>
+            <div class="advantages__slide swiper-slide">
+              <span class="advantages__icon">
+                <svg width="20" height="20">
+                  <use xlink:href="img/sprite.svg#crown"></use>
+                </svg>
+              </span>
+              <h3>Экспертиза и знания</h3>
+              <p>Наша команда опытных гидов имеет обширные знания о местности, погодных условиях и технике безопасности.
+                Это гарантирует, что наши клиенты находятся в надежных руках и могут в полной мере насладиться опытом
+                без опасений.</p>
+            </div>
+            <div class="advantages__slide swiper-slide">
+              <span class="advantages__icon">
+                <svg width="20" height="20">
+                  <use xlink:href="img/sprite.svg#boots-blue"></use>
+                </svg>
+              </span>
+              <h3>Оборудование и снаряжение</h3>
+              <p>Мы предоставляем клиентам все необходимое оборудование, необходимое для путешествия. Это избавляет
+                клиентов от необходимости покупать, брать с собой снаряжение, что делает путешествие более удобным и
+                экономически выгодным.</p>
+            </div>
+            <div class="advantages__slide swiper-slide">
+              <span class="advantages__icon">
+                <svg width="20" height="20">
+                  <use xlink:href="img/sprite.svg#path-map"></use>
+                </svg>
+              </span>
+              <h3>Индивидуальные маршруты</h3>
+              <p>Предлагает широкий выбор туров, отвечающих различным уровням мастерства и интересам. Мы также можем
+                адаптировать маршруты к вашим конкретным потребностям и предпочтениям, чтобы вы получили индивидуальный
+                опыт.</p>
+            </div>
             <div class="advantages__slide swiper-slide">
               <span class="advantages__icon">
                 <svg width="20" height="20">
@@ -1582,15 +1636,12 @@
         <p>Заполните форму и наш оператор свяжется с вами для консультации.</p>
         <form class="faq__form" action="https://echo.htmlacademy.ru" method="post">
           <div class="faq__input trial__input--name" data-validate-type="text" data-limitation="name"
-            data-message-base="Поле обязательно к заполнению" data-message-extra="Проверьте корректность"
-            data-message-success="Поле заполнено верно" data-required="data-required">
+            data-required="data-required">
             <label aria-label="Ваше имя.">
               <input type="text" name="user-name-4" placeholder="Как к вам обращаться?" required>
             </label>
           </div>
-          <div class="faq__input trial__input--phone" data-validate-type="phone"
-            data-message-base="Поле обязательно к заполнению" data-message-extra="Проверьте корректность номера"
-            data-message-success="Поле заполнено верно" data-required="data-required">
+          <div class="faq__input trial__input--phone" data-validate-type="phone" data-required="data-required">
             <label aria-label="Ваш номер телефона.">
               <input type="tel" name="user-phone" placeholder="Телефон" required>
             </label>
@@ -1619,6 +1670,54 @@
           </picture>
         </div>
       </section>
+      <section class="contacts">
+        <h2>Контакты</h2>
+        <div class="contacts__container container">
+          <div class="contacts__wrapper">
+            <p>Свяжитесь с нами любым удобным для вас способом или приходите к нам в гости. Мы будем рады поделиться
+              увлекательными историями и подобрать для вас тур.</p>
+            <ul class="contacts__list">
+              <li class="contacts__item">
+                <svg width="22" height="22">
+                  <use xlink:href="img/sprite.svg#phone"></use>
+                </svg>
+                <div class="contacts__card">
+                  <span class="contacts__name">Телефон</span>
+                  <a class="contacts__link" href="tel:88007253232">
+                    8 983 745 45 45
+                  </a>
+                </div>
+
+              </li>
+              <li class="contacts__item">
+                <svg width="22" height="22">
+                  <use xlink:href="img/sprite.svg#mail"></use>
+                </svg>
+                <div class="contacts__card">
+                  <span class="contacts__name">E-mail</span>
+                  <a class="contacts__link" href="mailto:info@lifetour.com">
+                    info@lifetour.com
+                  </a>
+                </div>
+              </li>
+              <li class="contacts__item">
+                <svg width="22" height="22">
+                  <use xlink:href="img/sprite.svg#pin-contact"></use>
+                </svg>
+                <div class="contacts__card">
+                  <span class="contacts__name">Адрес</span>
+                  <p>г. Москва, пр-т Мира, д. 14, офис 101</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="contacts__map map" id="map"></div>
+
+        </div>
+
+
+      </section>
+
     </main>
     <footer>
       <div class="container">
@@ -1690,8 +1789,9 @@
   </div>
 
 
-  <script src="js/vendor.min.js"></script>
-  <script src="js/main.min.js"></script>
+  <script src="js/vendor.min.js" defer></script>
+  <script src="js/main.min.js" defer></script>
+  <script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js"></script>
 </body>
 
 </html>

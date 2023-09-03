@@ -100,6 +100,7 @@
 
   &__input {
     display: flex;
+    width: 100%;
 
     @include tablet-width {
       width: 90%;
@@ -133,6 +134,10 @@
       font-size: 14px;
       padding: 15px;
     }
+  }
+
+  &__input.is-invalid input {
+    border: 1px solid #ff121f;
   }
 
   &__button {
