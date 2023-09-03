@@ -1,6 +1,6 @@
 .review {
   padding-top: 96px;
-  padding-left: 120px;
+  padding-left: calc(50% - 610px);
 
   @include tablet-width {
     padding-left: 45px;
