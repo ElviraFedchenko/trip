@@ -65,18 +65,20 @@ window.addEventListener('DOMContentLoaded', function () {
     let button = audio.querySelector('.audio__button-play');
     audio.addEventListener('click', function () {
       let iframe = createIframe();
-      button.remove();
       audio.appendChild(iframe);
     });
-    audio.classList.add('.audio__wrapper--enabled');
+    audio.classList.add('audio__wrapper--enabled');
   }
 
   function createIframe() {
     let iframe = document.createElement('iframe');
     iframe.setAttribute('allowfullscreen', '');
     iframe.setAttribute('allow', 'autoplay');
-    iframe.setAttribute('src', 'https://music.yandex.ru/album/25474374?dir=desc&activeTab=track-list');
-    iframe.classList.add('.audio__content');
+    iframe.setAttribute("width", "340");
+    iframe.setAttribute("heigth", "220");
+    iframe.setAttribute('src', 'https://music.yandex.ru/iframe/#track/112912322/25474374');
+    iframe.innerHTML = "Слушайте 001. Конец фронтенда, одинаковые фреймворки и логические свойства на Яндекс Музыке";
+    iframe.classList.add('audio__content');
     return iframe;
   }
 
@@ -111,18 +113,18 @@ const menuList = header.querySelector('.main-nav__inner');
 const menuToggle = header.querySelector('.main-nav__toggle');
 // const mainHeader = document.querySelector('.main-header');
 
-// header.classList.remove('page-header--no-js');
+// header.classList.remove('main-nav--no-js');
 // mainHeader.classList.remove('main-header--no-js');
-// menuList.classList.remove('nav--no-js');
-// menuToggle.classList.remove('page-header__toggle--no-js');
+// menuList.classList.remove('main-nav__inner--no-js');
+// menuToggle.classList.remove('main-nav__toggle--no-js');
 
-const onNavOutsideClick = (evt) => {
+const onNavOutsideClick = function onNavOutsideClick(evt) {
   if (!evt.target.closest('.main-nav__list')) {
     closeMenu();
   }
 };
 
-const onNaVLinkCloseMenu = (evt) => {
+const onNaVLinkCloseMenu = function onNaVLinkCloseMenu(evt) {
   if (!evt.target.closest('.main-nav__link')) {
     return;
   }
@@ -139,7 +141,7 @@ function closeMenu() {
   menuToggle.removeEventListener('click', closeMenu);
 }
 
-const openMenu = () => {
+const openMenu = function openMenu() {
   if (!menuToggle) {
     return;
   }
@@ -167,7 +169,7 @@ L.tileLayer(
 
 const mapIcon = L.icon({
   iconUrl: './img/marker-icon-2x.png',
-  iconSize: [38, 50],
+  iconSize: [30, 39],
   iconAnchor: [18, 50],
 });
 

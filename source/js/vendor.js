@@ -339,7 +339,7 @@ const initGallerySwiper = () => {
           spaceBetween: 5,
         },
         767: {
-          slidesPerView: 2,
+          slidesPerView: 3,
           spaceBetween: 5,
         },
         1199: {

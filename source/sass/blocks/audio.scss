@@ -37,6 +37,10 @@
 
   &__wrapper--enabled {
     display: block;
+
+    @include mobile-width {
+      display: none;
+    }
   }
 
   &__content {

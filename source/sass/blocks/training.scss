@@ -1,20 +1,39 @@
 .training {
   position: relative;
-  padding-top: 113px;
+  padding: 0 calc(50% - 610px);
+  padding-top: 103px;
 
   @include tablet-width {
-    padding-top: 75px;
+    padding: 0 35px;
+    padding-top: 67px;
   }
 
   @include mobile-width {
-    padding-top: 56px;
+    padding: 0 5px;
+    padding-top: 50px;
+  }
+
+  h2 {
+    margin-left: 10px;
+  }
+
+  &__wrapper {
+    padding-top: 32px;
+
+    @include tablet-width {
+      padding-top: 20px;
+    }
+
+    @include mobile-width {
+      padding-top: 20px;
+    }
   }
 
   & h2::after {
     content: "Обучение";
-    font-size: 40px;
+    font-size: 55px;
     color: rgba(45, 56, 63, 0.03);
-    margin-left: -142px;
+    margin-left: -191px;
 
     @include tablet-width {
       font-size: 40px;
@@ -31,16 +50,19 @@
 
   & p {
     color: $color-elephant;
-    max-width: 74%;
+    max-width: 70%;
     padding-top: 33px;
+
+    margin-left: 10px;
+
 
     @include tablet-width {
       padding-top: 22px;
-      max-width: 86%;
+      max-width: 83%;
     }
 
     @include mobile-width {
-      max-width: 100%;
+      max-width: 90%;
       padding-top: 16px;
       font-size: 14px;
       line-height: 20px;
@@ -48,17 +70,21 @@
   }
 
   & h3 {
-    padding-bottom: 32px;
     margin: 0;
+    font-size: 21px;
+    font-weight: 700;
+    line-height: 21px;
+    margin-left: 10px;
 
     @include tablet-width {
       font-size: 18px;
-      padding-bottom: 22px;
+      padding-bottom: 0;
     }
 
     @include mobile-width {
       font-size: 16px;
-      padding-bottom: 22px;
+      padding-bottom: 0;
+      margin-left: 14px;
     }
   }
 
@@ -66,22 +92,48 @@
     padding-top: 56px;
     padding-bottom: 40px;
 
+    h3 {
+      @include mobile-width {
+        margin-left: 5px;
+      }
+    }
+
+    @include tablet-width {
+      padding-top: 64px;
+      padding-bottom: 32px;
+    }
+
     @include mobile-width {
-      padding: 49px 5px 28px;
+      padding: 47px 5px 25px;
     }
   }
 
-  &__button--next {
+
+  &__button {
+    top: 70px;
+
     @include tablet-width {
-      right: 8px;
       top: 78px;
     }
-  }
 
-  &__button--prev {
-    @include tablet-width {
-      top: 78px;
-      right: 50px;
+    @include mobile-width {
+      top: 60px;
+    }
+
+    &--next {
+      right: 12px;
+
+      @include tablet-width {
+        right: 10px;
+      }
+    }
+
+    &--prev {
+      right: 55px;
+
+      @include tablet-width {
+        right: 50px;
+      }
     }
   }
 }

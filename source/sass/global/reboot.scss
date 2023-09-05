@@ -34,11 +34,6 @@ body {
   background-color: $color-default-white;
 }
 
-a {
-  color: $color-default-black;
-  text-decoration: none;
-}
-
 img,
 video {
   display: block;
@@ -142,7 +137,6 @@ select {
 
 // ie11 X removal
 input {
-
   &::-ms-clear,
   &::-ms-reveal {
     display: none;

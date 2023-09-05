@@ -192,6 +192,27 @@
   align-items: center;
   justify-content: center;
   color: var(--swiper-navigation-color, var(--swiper-theme-color));
+
+
+  &:hover,
+  &:focus {
+    background-color: #fff;
+    box-shadow: 0 0 0 1px #1c3374;
+    color: #1c3374;
+    outline: none;
+  }
+
+  &:active {
+    background-color: #1c3374;
+    color: #fff;
+    box-shadow: none;
+  }
+
+  &:disabled {
+    background:rgba(2, 102, 193, 0.10);
+    color: #fff;
+    pointer-events: none;
+  }
 }
 .swiper-button-prev.swiper-button-disabled,
 .swiper-button-next.swiper-button-disabled {
@@ -608,15 +629,23 @@ button.swiper-pagination-bullet {
 
 .swiper-pagination.swiper-pagination-bullets {
   width: fit-content;
-  right: 115px;
+  right: -9px;
   left: auto;
-  bottom: 60px;
+  bottom: 81px;
+  padding: 0 calc(50% - 600px);
 
   @media (max-width: 1199px) {
     width: 100%;
     left: 0;
     right: 32px;
-    bottom: 80px;
+    bottom: 74px;
+  }
+
+  @media (max-width: 767px) {
+    width: 100%;
+    left: 0;
+    right: 32px;
+    bottom: 28px;
   }
 }
 
