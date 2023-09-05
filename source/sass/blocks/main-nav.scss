@@ -1,11 +1,26 @@
 .main-nav {
-
   @include tablet-width {
     &--is-active {
+      & .main-nav__logo {
+        color: $color-default-black;
+      }
 
-      & .main-nav__logo,
       & .main-nav__phone {
         color: $color-default-black;
+
+        &:hover,
+        &:focus {
+          outline: none;
+          color: $color-resolution-blue;
+        }
+
+        &:active {
+          color: $color-navy-blue;
+        }
+
+        &:disabled {
+          color: rgba(255, 255, 255, 0.1);
+        }
       }
 
       & .main-nav__top {
@@ -35,7 +50,7 @@
   }
 
   &__inner {
-    padding: 23px 0 0 12px;
+    padding: 0 0 0 13px;
     margin: 0;
     z-index: 1;
     width: 100%;
@@ -68,18 +83,24 @@
     flex-direction: row;
     justify-content: space-between;
     background-color: transparent;
-    padding: 40px 120px 0 120px;
+    padding: 0 calc(50% - 600px - 10px) 0 calc(50% - 600px);
+    padding-top: 40px;
     z-index: 3;
     width: 100%;
 
+    @media (max-width: 1279px) {
+      padding-left: 40px;
+      padding-right: 40px;
+    }
+
     @include tablet-width {
-      padding: 30px 35px 0 45px;
+      padding: 30px 16px 0 45px;
     }
 
     @include mobile-width {
       grid-template-columns: 26px 1fr;
       align-items: flex-start;
-      padding: 15px 10px 0 15px;
+      padding: 15px 15px 0 15px;
     }
   }
 
@@ -98,7 +119,7 @@
       justify-content: flex-start;
       gap: 26px;
       padding: 124px 45px 70px 45px;
-      background-color: #fff;
+      background-color: $color-default-white;
       align-items: start;
     }
   }
@@ -106,7 +127,7 @@
   &__logo {
     @include tablet-width {
       order: 2;
-      margin-left: 221px;
+      margin-left: 242px;
     }
 
     @include mobile-width {
@@ -146,8 +167,22 @@
     @include mobile-width {
       font-size: 14px;
       line-height: 14px;
-      padding: 14px 0;
+      padding: 8px 0;
       grid-area: 2 / 2 / 2 / 2;
+    }
+
+    &:hover,
+    &:focus {
+      outline: none;
+      color: $color-resolution-blue;
+    }
+
+    &:active {
+      color: $color-navy-blue;
+    }
+
+    &:disabled {
+      color: rgba(255, 255, 255, 0.1);
     }
   }
 
@@ -156,7 +191,6 @@
 
     @include tablet-width {
       display: block;
-      background-position: 26px 26px;
       background-color: transparent;
       background-image: url("../../img/svg/menu.svg");
       background-repeat: no-repeat;

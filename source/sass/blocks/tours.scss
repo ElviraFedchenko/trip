@@ -1,5 +1,4 @@
 .tours {
-
   &__container {
     display: flex;
     position: relative;
@@ -16,6 +15,7 @@
     }
 
     @include mobile-width {
+      max-width: 320px;
       padding: 0 15px;
     }
   }
@@ -37,17 +37,17 @@
   &__wrapper {
     position: relative;
     width: 100%;
-    padding-top: 119px;
-    padding-bottom: 52px;
+    padding-top: 116px;
+    padding-bottom: 39px;
 
     @include tablet-width {
-      padding-top: 85px;
-      padding-bottom: 50px;
+      padding-top: 83px;
+      padding-bottom: 37px;
     }
 
     @include mobile-width {
       padding-top: 66px;
-      padding-bottom: 29px;
+      padding-bottom: 17px;
     }
   }
 
@@ -55,7 +55,6 @@
     @include mobile-width {
       display: grid;
       grid-template-columns: 1fr 78px;
-      ;
     }
   }
 
@@ -78,12 +77,11 @@
 
   &__inner {
     margin: 0 auto;
-    padding-top: 57px;
+    padding-top: 54px;
 
     @include tablet-width {
-
-    width: 666px;
-      padding-top: 46px;
+      width: 666px;
+      padding-top: 43px;
     }
 
     @include mobile-width {
@@ -97,6 +95,7 @@
     position: relative;
     color: $color-default-white;
     font-size: 12px;
+    line-height: 16px;
     font-weight: 500;
 
     @include tablet-width {
@@ -146,11 +145,15 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    padding: 28px 20px;
+    padding: 22px 20px;
+
+    @include mobile-width {
+      padding: 22px 10px 25px 20px;
+    }
 
     h3 {
       margin: 0;
-      padding: 23px 0 17px;
+      padding: 24px 0 19px;
       font-size: 24px;
       line-height: 28px;
       font-weight: 700;
@@ -159,10 +162,11 @@
 
       @include tablet-width {
         width: 100%;
+        padding: 25px 0 19px;
       }
 
       @include mobile-width {
-        padding: 15px 0;
+        padding: 17px 0;
         font-size: 20px;
         line-height: 24px;
       }
@@ -174,24 +178,41 @@
     width: 100%;
     display: flex;
     justify-content: space-between;
-    align-items: center;
     flex-wrap: wrap;
   }
 
   &__top {
+    align-items: center;
+
     @include mobile-width {
       row-gap: 15px;
       justify-content: flex-start;
-      column-gap: 16px;
+      column-gap: 24px;
     }
   }
 
   &__bottom {
     padding-top: 20px;
+    font-size: 12px;
+    font-weight: 300;
+    justify-content: unset;
+    gap: 53px;
+
+    @include tablet-width {
+      align-items: flex-start;
+      gap: 25px;
+    }
 
     @include mobile-width {
       padding-top: 15px;
+      gap: 15px;
     }
+  }
+
+  &__value {
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 13px;
   }
 
   &__pin {
@@ -223,11 +244,14 @@
   &__bar {
     gap: 13px;
     align-items: center;
+    font-size: 12px;
+    font-weight: 500;
   }
 
   &__feature {
     flex-direction: column;
     position: relative;
+    gap: 0;
 
     &:first-child::before {
       content: "";
@@ -237,11 +261,15 @@
       width: 100%;
       height: 1px;
       background-color: rgba(255, 255, 255, 0.2);
+
+      @include mobile-width {
+        top: -16px;
+      }
     }
   }
 
   &__card-value {
-    font-size: 13px;
+    font-size: 5px;
     font-weight: 700;
 
     @include mobile-width {
@@ -267,6 +295,32 @@
     grid-template-columns: 1fr 12px;
     gap: 12px;
     align-self: center;
+    letter-spacing: 0.64px;
+
+    @include mobile-width {
+      font-size: 14px;
+      font-weight: 700;
+      line-height: 14px;
+      letter-spacing: 0.56px;
+    }
+
+    &:hover,
+    &:focus {
+      outline: none;
+      color: $color-resolution-blue;
+    }
+
+    &:active {
+      color: $color-navy-blue;
+    }
+
+    &:disabled {
+      color: rgba(2, 102, 193, 0.1);
+    }
+
+    svg {
+      margin-top: 4px;
+    }
   }
 
   &__bg-hills {
@@ -275,7 +329,7 @@
     left: 58.2%;
     position: absolute;
     z-index: -3;
-    top: 739px;
+    top: 781px;
 
     @include tablet-width {
       width: 602px;
@@ -298,7 +352,7 @@
     z-index: -3;
     left: auto;
     right: 70%;
-    top: 1211px;
+    top: 1297px;
 
     @include tablet-width {
       display: none;

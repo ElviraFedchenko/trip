@@ -1,25 +1,42 @@
 .advantages {
-  padding-top: 113px;
+  position: relative;
+  padding-top: 120px;
 
   @include tablet-width {
-    padding: 77px 45px 70px;
+    padding: 73px 45px 70px;
   }
 
   @include mobile-width {
-    padding: 60px 15px 66px;
+    padding: 18px 15px 61px;
   }
 
   &__slider {
     padding-top: 46px;
     padding-bottom: 85px;
+    margin-left: -25px;
+
+    @include tablet-width {
+      margin-left: 0;
+      padding-bottom: 0;
+    }
 
     @include mobile-width {
+      padding-top: 0;
       padding-bottom: 0;
     }
   }
 
   h2 {
-    text-align: center;
+    margin-left: 40%;
+
+    @include tablet-width {
+      margin-left: 35%;
+    }
+
+    @include mobile-width {
+      margin-left: 19%;
+      padding-bottom: 29px;
+    }
 
     &::after {
       content: "Преимущества";
@@ -29,7 +46,7 @@
 
       @include tablet-width {
         font-size: 40px;
-        margin-left: -277px;
+        margin-left: -275px;
       }
 
       @include mobile-width {
@@ -49,6 +66,10 @@
       justify-content: center;
       align-items: stretch;
       align-content: stretch;
+    }
+
+    @include mobile-width {
+      row-gap: 13px;
     }
   }
 
@@ -72,6 +93,7 @@
 
     @include mobile-width {
       min-width: 290px;
+      padding: 20px 10px;
     }
 
     h3 {
@@ -119,6 +141,16 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
+    @include tablet-width {
+      width: 48px;
+      height: 48px;
+    }
+
+    @include mobile-width {
+      width: 42px;
+      height: 42px;
+    }
   }
 
   &__button {
@@ -131,18 +163,18 @@
     }
 
     &--prev {
-      left: 50%;
+      left: calc(50% - 27px);
     }
 
     &--next {
-      left: 53%;
+      left: 51%;
     }
   }
 
   &__bg-image {
     position: absolute;
     z-index: -1;
-    top: 82%;
+    top: 11%;
     left: 58%;
 
     @include tablet-width {

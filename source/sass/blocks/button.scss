@@ -3,7 +3,6 @@
   font-family: $montserrat;
   color: $color-default-white;
   justify-content: center;
-  justify-content: center;
   background-color: $color-navy-blue;
   border: none;
   cursor: pointer;
@@ -16,11 +15,26 @@
     background-color: $color-torch-red;
   }
 
-  &:disabled {
-    opacity: 0.5;
+  &:hover,
+  &:focus {
+    background-color: $color-default-white;
+    box-shadow: 0 0 0 1px $color-resolution-blue;
+    color: $color-resolution-blue;
+    outline: none;
+  }
 
+  &:active {
+    background-color: $color-resolution-blue;
+    color: $color-default-white;
+    box-shadow: none;
+  }
+
+  &:disabled {
+    background: rgba(2, 102, 193, 0.1);
+    color: $color-default-white;
     pointer-events: none;
   }
+
 
   @include hover-focus {
     opacity: 0.8;

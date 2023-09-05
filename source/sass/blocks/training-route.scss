@@ -1,10 +1,20 @@
 .training-route {
-
   &__wrapper {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 30px;
+    gap: 20px;
     position: relative;
+    margin-left: 10px;
+
+    @include mobile-width {
+      margin-left: 14px;
+    }
+
+    h3 {
+      @include mobile-width {
+        margin-left: 14px;
+      }
+    }
 
     &::before {
       content: "";
@@ -21,6 +31,7 @@
     @include tablet-width {
       grid-template-columns: 1fr;
       gap: 53px;
+      padding-top: 15px;
 
       &::before {
         visibility: hidden;
@@ -28,7 +39,7 @@
     }
 
     @include mobile-width {
-      padding-top: 5px;
+      padding-top: 26px;
       gap: 25px;
 
       &::before {
@@ -47,14 +58,14 @@
     list-style: none;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 30px;
+    gap: 20px;
     position: relative;
 
     @include tablet-width {
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
-      width: 90%;
+      width: 89%;
 
       &::before {
         content: "";
@@ -125,6 +136,7 @@
     max-width: 280px;
     min-height: 100%;
     padding-bottom: 34px;
+    padding-top: 41px;
     position: relative;
 
     @include tablet-width {
@@ -139,7 +151,7 @@
       grid-template-columns: 19px 1fr;
       max-width: 100%;
       padding: 0;
-      padding-left: 34px;
+      padding-left: 33px;
       font-size: 12px;
       line-height: 18px;
       gap: 12px;
@@ -162,6 +174,10 @@
       height: 14px;
       border-radius: 50%;
       background-color: #0266c1;
+
+      @include mobile-width {
+        bottom: 8px;
+      }
     }
 
 
@@ -188,6 +204,9 @@
 
       @include mobile-width {
         line-height: 18px;
+        font-size: 12px;
+        font-weight: 400;
+        max-width: 80%;
       }
     }
   }
