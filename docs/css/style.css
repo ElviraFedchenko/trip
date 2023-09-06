@@ -3442,7 +3442,7 @@ button,
 }
 @media (max-width: 767px) {
   .tours__photo {
-    width: 380px;
+    width: 290px;
     height: 412px;
   }
 }
@@ -3692,7 +3692,7 @@ button,
   .tours__bg-hills {
     width: 346px;
     height: 595px;
-    top: 792px;
+    top: 706px;
     left: auto;
     right: -175px;
   }
@@ -5414,38 +5414,38 @@ button,
   z-index: 0;
   position: relative;
   background-color: #2d383f;
-  background-image: url("../../img/map/map.jpg");
+  background-image: url("../img/map/map.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
 }
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
   .contacts__map {
-    background-image: url("../../img/map/map@2x.jpg");
+    background-image: url("../img/map/map@2x.jpg");
   }
 }
 @media (max-width: 1199px) {
   .contacts__map {
-    background-image: url("../../img/map/map-tablet.jpg");
+    background-image: url("../img/map/map-tablet.jpg");
     min-height: 340px;
     margin-top: 0;
   }
 }
 @media (max-width: 1199px) and (-webkit-min-device-pixel-ratio: 2), (max-width: 1199px) and (min-resolution: 2dppx) {
   .contacts__map {
-    background-image: url("../../img/map/map-tablet@2x.jpg");
+    background-image: url("../img/map/map-tablet@2x.jpg");
   }
 }
 @media (max-width: 767px) {
   .contacts__map {
     margin-top: 0;
-    background-image: url("../../img/map/map-mobile.jpg");
+    background-image: url("../img/map/map-mobile.jpg");
     min-height: 320px;
   }
 }
 @media (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2), (max-width: 767px) and (min-resolution: 2dppx) {
   .contacts__map {
-    background-image: url("../../img/map/map-mobile@2x.jpg");
+    background-image: url("../img/map/map-mobile@2x.jpg");
   }
 }
 
