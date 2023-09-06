@@ -31,12 +31,13 @@
   &__list {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     font-weight: 400;
     column-gap: 33px;
     row-gap: 10px;
-    margin: 0 64px 0 0;
+    margin: 0 63px 0 0;
 
 
     @include tablet-width {
@@ -116,6 +117,8 @@
     font-size: 18px;
     line-height: 18px;
     padding: 23px 0;
+    min-width: 145px;
+    margin-left: 10px;
 
     &:hover,
     &:focus {
@@ -144,5 +147,19 @@
     color: $color-elephant;
     font-weight: 300;
     padding-bottom: 30px;
+  }
+
+  &__logo {
+    min-width: 205px;
+    margin-right: 10px;
+
+    @include tablet-width {
+      min-width: 120px;
+      margin-right: 10px;
+    }
+
+    @include tablet-width {
+      margin-right: 0;
+    }
   }
 }

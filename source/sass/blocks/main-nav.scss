@@ -1,12 +1,9 @@
 .main-nav {
   @include tablet-width {
     &--is-active {
-      & .main-nav__logo {
-        color: $color-default-black;
-      }
-
+      & .main-nav__logo svg,
       & .main-nav__phone {
-        color: $color-default-black;
+        color: $color-elephant;
 
         &:hover,
         &:focus {
@@ -31,6 +28,20 @@
     }
   }
 
+  &__logo svg {
+    color: $color-default-white;
+
+    @include tablet-width {
+      width: 144px;
+      height: 44px;
+    }
+
+    @include mobile-width {
+      width: 112px;
+      height: 34px;
+    }
+  }
+
   &__container {
     width: 100%;
     display: grid;
@@ -52,7 +63,7 @@
   &__inner {
     padding: 0 0 0 13px;
     margin: 0;
-    z-index: 1;
+    z-index: -1;
     width: 100%;
     display: flex;
     flex-wrap: wrap;
@@ -107,6 +118,7 @@
   &__list {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     color: $color-default-white;
@@ -121,6 +133,10 @@
       padding: 124px 45px 70px 45px;
       background-color: $color-default-white;
       align-items: start;
+    }
+
+    @include mobile-width {
+      gap: 22px;
     }
   }
 
@@ -167,7 +183,7 @@
     @include mobile-width {
       font-size: 14px;
       line-height: 14px;
-      padding: 8px 0;
+      padding: 0;
       grid-area: 2 / 2 / 2 / 2;
     }
 
