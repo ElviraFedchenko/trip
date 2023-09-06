@@ -120,76 +120,76 @@
   }
 
   &__description--kavkaz {
-    background-image: $gradient-dark-bacground, url("../../img/background/сaucasus-bg.webp");
+    background-image: $gradient-dark-bacground, url("../img/background/сaucasus-bg.webp");
 
 
     @media (min-resolution: 2dppx) {
-      background-image: $gradient-dark-bacground, url("../../img/background/сaucasus-bg.webp");
+      background-image: $gradient-dark-bacground, url("../img/background/сaucasus-bg.webp");
     }
 
     @include tablet-width {
-      background-image: $gradient-dark-bacground, url("../../img/background/сaucasus-bg-tablet.webp");
+      background-image: $gradient-dark-bacground, url("../img/background/сaucasus-bg-tablet.webp");
 
       @media (min-resolution: 2dppx) {
-        background-image: $gradient-dark-bacground, url("../../img/background/сaucasus-bg-tablet.webp");
+        background-image: $gradient-dark-bacground, url("../img/background/сaucasus-bg-tablet.webp");
       }
     }
 
     @include mobile-width {
-      background-image: $gradient-dark-bacground, url("../../img/background/сaucasus-bg-mobile.webp");
+      background-image: $gradient-dark-bacground, url("../img/background/сaucasus-bg-mobile.webp");
 
       @media (min-resolution: 2dppx) {
-        background-image: $gradient-dark-bacground, url("../../img/background/сaucasus-bg-mobile.webp");
+        background-image: $gradient-dark-bacground, url("../img/background/сaucasus-bg-mobile.webp");
       }
     }
   }
 
   &__description--kamchatka {
-    background-image: $gradient-dark-bacground, url("../../img/background/kamchatka-bg.webp");
+    background-image: $gradient-dark-bacground, url("../img/background/kamchatka-bg.webp");
 
 
     @media (min-resolution: 2dppx) {
-      background-image: $gradient-dark-bacground, url("../../img/background/kamchatka-bg.webp");
+      background-image: $gradient-dark-bacground, url("../img/background/kamchatka-bg.webp");
     }
 
     @include tablet-width {
-      background-image: $gradient-dark-bacground, url("../../img/background/kamchatka-bg-tablet.webp");
+      background-image: $gradient-dark-bacground, url("../img/background/kamchatka-bg-tablet.webp");
 
       @media (min-resolution: 2dppx) {
-        background-image: $gradient-dark-bacground, url("../../img/background/kamchatka-bg-tablet.webp");
+        background-image: $gradient-dark-bacground, url("../img/background/kamchatka-bg-tablet.webp");
       }
     }
 
     @include mobile-width {
-      background-image: $gradient-dark-bacground, url("../../img/background/kamchatka-bg-mobile.webp");
+      background-image: $gradient-dark-bacground, url("../img/background/kamchatka-bg-mobile.webp");
 
       @media (min-resolution: 2dppx) {
-        background-image: $gradient-dark-bacground, url("../../img/background/kamchatka-bg-mobile.webp");
+        background-image: $gradient-dark-bacground, url("../img/background/kamchatka-bg-mobile.webp");
       }
     }
   }
 
   &__description--altai {
-    background-image: $gradient-dark-bacground, url("../../img/background/altai-bg.webp");
+    background-image: $gradient-dark-bacground, url("../img/background/altai-bg.webp");
 
 
     @media (min-resolution: 2dppx) {
-      background-image: $gradient-dark-bacground, url("../../img/background/altai-bg.webp");
+      background-image: $gradient-dark-bacground, url("../img/background/altai-bg.webp");
     }
 
     @include tablet-width {
-      background-image: $gradient-dark-bacground, url("../../img/background/altai-bg-tablet.webp");
+      background-image: $gradient-dark-bacground, url("../img/background/altai-bg-tablet.webp");
 
       @media (min-resolution: 2dppx) {
-        background-image: $gradient-dark-bacground, url("../../img/background/altai-bg-tablet.webp");
+        background-image: $gradient-dark-bacground, url("../img/background/altai-bg-tablet.webp");
       }
     }
 
     @include mobile-width {
-      background-image: $gradient-dark-bacground, url("../../img/background/altai-bg-mobile.webp");
+      background-image: $gradient-dark-bacground, url("../img/background/altai-bg-mobile.webp");
 
       @media (min-resolution: 2dppx) {
-        background-image: $gradient-dark-bacground, url("../../img/background/kamchatka-bg-mobile.webp");
+        background-image: $gradient-dark-bacground, url("../img/background/kamchatka-bg-mobile.webp");
       }
     }
   }
