@@ -200,32 +200,32 @@
     z-index: 0;
     position: relative;
     background-color: $color-elephant;
-    background-image: url("../../img/map/map.jpg");
+    background-image: url("../img/map/map.jpg");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
 
     @media (min-resolution: 2dppx) {
-      background-image: url("../../img/map/map@2x.jpg");
+      background-image: url("../img/map/map@2x.jpg");
     }
 
     @include tablet-width {
-      background-image: url("../../img/map/map-tablet.jpg");
+      background-image: url("../img/map/map-tablet.jpg");
       min-height: 340px;
       margin-top: 0;
 
       @media (min-resolution: 2dppx) {
-        background-image: url("../../img/map/map-tablet@2x.jpg");
+        background-image: url("../img/map/map-tablet@2x.jpg");
       }
     }
 
     @include mobile-width {
       margin-top: 0;
-      background-image: url("../../img/map/map-mobile.jpg");
+      background-image: url("../img/map/map-mobile.jpg");
       min-height: 320px;
 
       @media (min-resolution: 2dppx) {
-        background-image: url("../../img/map/map-mobile@2x.jpg");
+        background-image: url("../img/map/map-mobile@2x.jpg");
       }
     }
   }
