@@ -39,6 +39,8 @@ const initHeroSwiper = () => {
       //   disableOnInteraction: false,
       // },
 
+      keyboard: true,
+
       // Скорость прокрутки - по умолчанию 300мс
       speed: 300,
 
@@ -222,11 +224,11 @@ const initReviewSwiper = () => {
           spaceBetween: 10,
         },
         767: {
-          slidesPerView: 1,
+          slidesPerView: 'auto',
           spaceBetween: 10,
         },
         1199: {
-          slidesPerView: 1,
+          slidesPerView: 'auto',
           spaceBetween: 10,
         },
       },
@@ -275,18 +277,18 @@ const initAdvantagesSwiper = () => {
       // //Брейкпоинты (адаптив)
       // //Ширина экрана
       breakpoints: {
-
-        320: {
-          slidesPerView: 5,
-          loop: false,
+        1199: {
+          slidesPerView: 'auto',
+          spaceBetween: 30,
         },
         767: {
           slidesPerView: 5,
           loop: false,
+          spaceBetween: 0,
         },
-        1199: {
-          slidesPerView: 3,
-          spaceBetween: 30,
+        320: {
+          slidesPerView: 5,
+          loop: false,
         },
       },
 
@@ -316,7 +318,7 @@ const initGallerySwiper = () => {
       // Количество пролистываемых слайдов
       // slidesPerGroup: 1,
       // Бесконечный слайдер
-      loop: true,
+      loop: false,
 
       // // Автопрокрутка
       // autoplay: {
@@ -330,20 +332,19 @@ const initGallerySwiper = () => {
 
       // Скорость прокрутки - по умолчанию 300мс
       speed: 600,
+      slidesPerView: 'auto',
 
       // //Брейкпоинты (адаптив)
       // //Ширина экрана
       breakpoints: {
         320: {
           slidesPerView: 2,
-          spaceBetween: 5,
+          spaceBetween: 3,
         },
         767: {
-          slidesPerView: 3,
           spaceBetween: 5,
         },
         1199: {
-          slidesPerView: 5,
           spaceBetween: 5,
           slidesPerGroup: 1,
         },

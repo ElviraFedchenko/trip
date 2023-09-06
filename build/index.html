@@ -34,12 +34,9 @@
         </button>
         <div class="main-nav__container">
           <a class="main-nav__logo" href="index.html">
-            <picture>
-              <source media="(min-width: 1200px)" srcset="img/svg/logo.svg" width="205" height="62">
-              <source media="(min-width: 768px)" srcset="img/svg/logo-tablet.svg" width="144" height="44">
-              <source media="(min-width: 320px)" srcset="img/svg/logo-mobile.svg" width="112" height="34">
-              <img src="img/svg/logo.svg" width="205" height="62" alt="логотип LifeTour">
-            </picture>
+            <svg width="205" height="62">
+              <use xlink:href="img/sprite.svg#logo"></use>
+            </svg>
           </a>
           <nav class="main-nav__inner">
             <ul class="main-nav__list">
@@ -1504,6 +1501,68 @@
             </svg>
           </div>
           <div class="gallery__wrapper swiper-wrapper">
+            <div class="gallery__slide swiper-slide">
+              <div class="gallery__img">
+                <picture>
+                  <source type="image/webp" srcset="img/gallery/photo-1@2x.webp 2x, img/gallery/photo-1.webp 1x"
+                    width="275" height="449">
+                  <img src="img/gallery/photo-1.jpg" srcset="img/gallery/photo-1@2x.jpg 2x" width="275" height="449"
+                    alt="Человек на вершине горы.">
+                </picture>
+              </div>
+            </div>
+            <div class="gallery__slide swiper-slide">
+              <div class="gallery__img gallery__img--second">
+                <picture>
+                  <source type="image/webp" srcset="img/gallery/photo-2@2x.webp 2x, img/gallery/photo-2.webp 1x"
+                    width="298" height="179">
+                  <img src="img/gallery/photo-2.jpg" srcset="img/gallery/photo-2@2x.jpg 2x" width="298" height="179"
+                    alt="Группа трекеров у костра.">
+                </picture>
+                <picture>
+                  <source type="image/webp" srcset="img/gallery/photo-3@2x.webp 2x, img/gallery/photo-3.webp 1x"
+                    width="298" height="265">
+                  <img src="img/gallery/photo-3.jpg" srcset="img/gallery/photo-3@2x.jpg 2x" width="298" height="265"
+                    alt="Человек с компасом на вершине горы.">
+                </picture>
+              </div>
+            </div>
+            <div class="gallery__slide swiper-slide">
+              <div class="gallery__img">
+                <picture>
+                  <source type="image/webp" srcset="img/gallery/photo-4@2x.webp 2x, img/gallery/photo-4.webp 1x"
+                    width="272" height="449">
+                  <img src="img/gallery/photo-4.jpg" srcset="img/gallery/photo-4@2x.jpg 2x" width="272" height="449"
+                    alt="Группа треккеров покоряют вершину.">
+                </picture>
+              </div>
+            </div>
+            <div class="gallery__slide swiper-slide">
+              <div class="gallery__img gallery__img--second">
+                <picture>
+                  <source type="image/webp" srcset="img/gallery/photo-5@2x.webp 2x, img/gallery/photo-5.webp 1x"
+                    width="298" height="179">
+                  <img src="img/gallery/photo-5.jpg" srcset="img/gallery/photo-5@2x.jpg 2x" width="298" height="179"
+                    alt="Группа трекеров на заснеженной дороге.">
+                </picture>
+                <picture>
+                  <source type="image/webp" srcset="img/gallery/photo-6@2x.webp 2x, img/gallery/photo-6.webp 1x"
+                    width="298" height="265">
+                  <img src="img/gallery/photo-6.jpg" srcset="img/gallery/photo-6@2x.jpg 2x" width="298" height="265"
+                    alt="Палатка в горах.">
+                </picture>
+              </div>
+            </div>
+            <div class="gallery__slide swiper-slide">
+              <div class="gallery__img">
+                <picture>
+                  <source type="image/webp" srcset="img/gallery/photo-7@2x.webp 2x, img/gallery/photo-7.webp 1x"
+                    width="276" height="449">
+                  <img src="img/gallery/photo-7.jpg" srcset="img/gallery/photo-7@2x.jpg 2x" width="276" height="449"
+                    alt="Два мужчины у костра в горах.">
+                </picture>
+              </div>
+            </div>
             <div class="gallery__slide swiper-slide">
               <div class="gallery__img">
                 <picture>

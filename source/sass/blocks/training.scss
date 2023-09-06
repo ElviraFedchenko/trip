@@ -1,9 +1,13 @@
 .training {
   position: relative;
-  padding: 0 calc(50% - 610px);
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 110px;
   padding-top: 103px;
 
   @include tablet-width {
+    max-width: 768px;
     padding: 0 35px;
     padding-top: 67px;
   }

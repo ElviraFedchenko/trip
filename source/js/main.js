@@ -64,8 +64,10 @@ window.addEventListener('DOMContentLoaded', function () {
   function setupAudio() {
     let button = audio.querySelector('.audio__button-play');
     audio.addEventListener('click', function () {
-      let iframe = createIframe();
-      audio.appendChild(iframe);
+      if (!audio.querySelector('iframe')) {
+        let iframe = createIframe();
+        audio.appendChild(iframe);
+      }
     });
     audio.classList.add('audio__wrapper--enabled');
   }
@@ -169,8 +171,9 @@ L.tileLayer(
 
 const mapIcon = L.icon({
   iconUrl: './img/marker-icon-2x.png',
-  iconSize: [30, 39],
+  iconSize: [20, 31],
   iconAnchor: [18, 50],
+
 });
 
 const marker = L.marker({
