@@ -19,7 +19,6 @@
   <link rel="preload" href="./fonts/montserrat-v25-cyrillic_latin-600.woff2" as="font" crossorigin="anonymous">
   <link rel="preload" href="./fonts/montserrat-v25-cyrillic_latin-700.woff2" as="font" crossorigin="anonymous">
   <link rel="preload" href="./fonts/montserrat-v25-cyrillic_latin-800.woff2" as="font" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css">
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 
@@ -33,7 +32,7 @@
           <span class="visually-hidden">Открыть меню.</span>
         </button>
         <div class="main-nav__container">
-          <a class="main-nav__logo" href="index.html">
+          <a class="main-nav__logo" href="index.html" aria-label="Логотип LifeTour.">
             <svg width="205" height="62">
               <use xlink:href="img/sprite.svg#logo"></use>
             </svg>
@@ -41,28 +40,26 @@
           <nav class="main-nav__inner">
             <ul class="main-nav__list">
               <li class="main-nav__item">
-                <a class="main-nav__link" href="index.html">Туры</a>
+                <a class="main-nav__link" href="#tours">Туры</a>
               </li>
               <li class="main-nav__item">
-                <a class="main-nav__link" href="#nowhere">Обучение</a>
+                <a class="main-nav__link" href="#training">Обучение</a>
               </li>
               <li class="main-nav__item">
-                <a class="main-nav__link" href="#nowhere">О нас</a>
+                <a class="main-nav__link" href="#about">О нас</a>
               </li>
               <li class="main-nav__item">
-                <a class="main-nav__link" href="#nowhere">Отзывы</a>
+                <a class="main-nav__link" href="#review">Отзывы</a>
               </li>
               <li class="main-nav__item">
-                <a class="main-nav__link" href="#nowhere">Фотографии</a>
+                <a class="main-nav__link" href="#gallery">Фотографии</a>
               </li>
               <li class="main-nav__item">
-                <a class="main-nav__link" href="#nowhere">Контакты</a>
+                <a class="main-nav__link" href="#contacts">Контакты</a>
               </li>
             </ul>
           </nav>
-          <a class="main-nav__phone" href="tel:88007253232">
-            <span class="main-nav__desk">8 800 725 32 32</span>
-          </a>
+          <a class="main-nav__phone" href="tel:88007253232">8 800 725 32 32</a>
         </div>
       </div>
       <div class="hero">
@@ -72,10 +69,11 @@
               <div class="hero__text">
                 <h2>Захватывающие<br>вершины Кавказа</h2>
                 <div class="hero__text-wrapper">
-                  <p>В сопровождении опытных&nbsp;гидов вы пройдете через потрясающие ландшафты и совершите восход на&nbsp;вершину
+                  <p>В сопровождении опытных&nbsp;гидов вы пройдете через потрясающие ландшафты и совершите восход
+                    на&nbsp;вершину
                     горы&nbsp;Чегет.</p>
                 </div>
-                <a class="hero__toggle button" href="#nowhere">Смотреть тур</a>
+                <a class="hero__toggle button" href="#nowhere" aria-label="кнопка.">Смотреть тур</a>
               </div>
               <div class="hero__desc">
                 <span><svg width="12" height="12">
@@ -92,24 +90,45 @@
                       <source type="image/webp" media="(min-width: 1200px)"
                         srcset="img/background/video-bg.webp 1x, img/background/video-bg@2x.webp 2x">
                       <source type="image/webp" media="(min-width: 768px)"
-                        srcset="img/background/video-bg-tablet.webp 1x, img/background/video-bg-tablet@2x.webp 2x" width="442" height="300">
+                        srcset="img/background/video-bg-tablet.webp 1x, img/background/video-bg-tablet@2x.webp 2x"
+                        width="442" height="300">
 
                       <source media="(min-width: 1200px)"
                         srcset="img/background/video-bg.jpg 1x, img/background/video-bg@2x.jpg 2x">
                       <source media="(min-width: 768px)"
-                        srcset="img/background/video-bg-tablet.jpg 1x, img/background/video-bg-tablet@2x.jpg 2x" width="442" height="300">
+                        srcset="img/background/video-bg-tablet.jpg 1x, img/background/video-bg-tablet@2x.jpg 2x"
+                        width="442" height="300">
                       <img class="media__img" src="img/background/video-bg.jpg"
-                        srcset="img/background/video-bg@2x.jpg 2x" alt="Вершина Кавказа" width="482" height="317">
+                        srcset="img/background/video-bg@2x.jpg 2x" alt="Вершина Кавказа" width="482" height="317"
+                        loading="lazy">
                     </picture>
                   </a>
                   <div class="media__button" aria-label="Посмотреть видео" tabindex="0">
-                    <svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <circle cx="28" cy="28" r="27.5" fill="currentColor" fill-opacity="0.2" stroke="white" />
-                      <path d="M37 28L25 17V39L37 28Z" fill="white" stroke="white" stroke-opacity="0" />
+                    <svg width="56" height="56">
+                      <use xlink:href="img/sprite.svg#media-play"></use>
                     </svg>
                   </div>
                 </div>
               </div>
+              <picture class="hero__background">
+                <source type="image/webp" media="(min-width: 1200px)"
+                  srcset="img/background/сaucasus-bg@2x.webp 2x, img/background/сaucasus-bg.webp 1x" width="1440"
+                  height="800">
+                <source type="image/webp" media="(min-width: 768px)"
+                  srcset="img/background/сaucasus-bg-tablet@2x.webp 2x, img/background/сaucasus-bg-tablet.webp 1x"
+                  width="768" height="1024">
+                <source type="image/webp" media="(min-width: 320px)"
+                  srcset="img/background/сaucasus-bg-mobile@2x.webp 2x, img/background/сaucasus-bg-mobile.webp 1x"
+                  width="320" height="568">
+                <source media="(min-width: 768px)"
+                  srcset="img/background/сaucasus-bg-tablet@2x.jpg 2x, img/background/сaucasus-bg-tablet.jpg 1x"
+                  width="768" height="1024">
+                <source media="(min-width: 320px)"
+                  srcset="img/background/сaucasus-bg-mobile@2x.jpg 2x, img/background/сaucasus-bg-mobile.jpg 1x"
+                  width="320" height="568">
+                <img src="img/background/сaucasus-bg.jpg" srcset="img/background/сaucasus-bg@2x.jpg 2x" width="1440"
+                  height="880" alt="Вершины Кавказа." loading="lazy">
+              </picture>
             </div>
             <div class="hero__description hero__description--kamchatka swiper-slide">
               <div class="hero__text">
@@ -118,7 +137,7 @@
                   <p>Незабываемое приключение, во время которого вы отправитесь в путешествие по одному из самых
                     нетронутых уголков дикой природы в мире.</p>
                 </div>
-                <a class="hero__toggle button" href="#nowhere">Смотреть тур</a>
+                <a class="hero__toggle button" href="#nowhere" aria-label="кнопка.">Смотреть тур</a>
               </div>
               <div class="hero__desc">
                 <span><svg width="12" height="12">
@@ -142,10 +161,30 @@
                     <source media="(min-width: 768px)"
                       srcset="img/photo-cards-tablet.png 1x, img/photo-cards-tablet@2x.png 2x" width="442" height="300">
                     <img class="hero__img" src="img/photo-cards.png" srcset="img//photo-cards@2x.png 2x"
-                      alt="Вершина Кавказа" width="410" height="459">
+                      alt="Вершина Кавказа" width="410" height="459" loading="lazy">
                   </picture>
                 </div>
               </div>
+              <picture class="hero__background">
+                <source type="image/webp" media="(min-width: 1200px)"
+                  srcset="img/background/kamchatka-bg@2x.webp 2x, img/background/kamchatka-bg.webp 1x" width="1440"
+                  height="800">
+                <source type="image/webp" media="(min-width: 768px)"
+                  srcset="img/background/kamchatka-bg-tablet@2x.webp 2x, img/background/kamchatka-bg-tablet.webp 1x"
+                  width="768" height="1024">
+                <source type="image/webp" media="(min-width: 320px)"
+                  srcset="img/background/kamchatka-bg-mobile@2x.webp 2x, img/background/kamchatka-bg-mobile.webp 1x"
+                  width="320" height="568">
+                <source media="(min-width: 768px)"
+                  srcset="img/background/kamchatka-bg-tablet@2x.jpg 2x, img/background/kamchatka-bg-tablet.jpg 1x"
+                  width="768" height="1024">
+                <source media="(min-width: 320px)"
+                  srcset="img/background/kamchatka-bg-mobile@2x.jpg 2x, img/background/kamchatka-bg-mobile.jpg 1x"
+                  width="320" height="568">
+                <img src="img/background/kamchatka-bg.jpg" srcset="img/background/kamchatka-bg@2x.jpg 2x" width="1440"
+                  height="880" alt="Вершины Кавказа." loading="lazy">
+              </picture>
+
             </div>
             <div class="hero__description hero__description--altai swiper-slide">
               <div class="hero__text">
@@ -154,7 +193,7 @@
                   <p>Алтайский трекинг-тур – это захватывающее приключение с посещением магических и захватывающих дух
                     ландшафтов Алтайских гор. </p>
                 </div>
-                <a class="hero__toggle button" href="#nowhere">Смотреть тур</a>
+                <a class="hero__toggle button" href="#nowhere" aria-label="кнопка.">Смотреть тур</a>
               </div>
               <div class="hero__desc">
                 <span><svg width="12" height="12">
@@ -221,6 +260,25 @@
                   </div>
                 </div>
               </div>
+              <picture class="hero__background">
+                <source type="image/webp" media="(min-width: 1200px)"
+                  srcset="img/background/altai-bg@2x.webp 2x, img/background/altai-bg.webp 1x" width="1440"
+                  height="800">
+                <source type="image/webp" media="(min-width: 768px)"
+                  srcset="img/background/altai-bg-tablet@2x.webp 2x, img/background/altai-bg-tablet.webp 1x" width="768"
+                  height="1024">
+                <source type="image/webp" media="(min-width: 320px)"
+                  srcset="img/background/altai-bg-mobile@2x.webp 2x, img/background/altai-bg-mobile.webp 1x" width="320"
+                  height="568">
+                <source media="(min-width: 768px)"
+                  srcset="img/background/altai-bg-tablet@2x.jpg 2x, img/background/altai-bg-tablet.jpg 1x" width="768"
+                  height="1024">
+                <source media="(min-width: 320px)"
+                  srcset="img/background/altai-bg-mobile@2x.jpg 2x, img/background/altai-bg-mobile.jpg 1x" width="320"
+                  height="568">
+                <img src="img/background/altai-bg.jpg" srcset="img/background/altai-bg@2x.jpg 2x" width="1440"
+                  height="880" alt="Вершины Кавказа." loading="lazy">
+              </picture>
             </div>
           </div>
 
@@ -233,11 +291,11 @@
       </div>
     </header>
     <main>
-      <section class="tours">
+      <section class="tours" id="tours">
         <div class="tours__container container">
           <div class="tours__wrapper">
             <div class="tours__slider swiper">
-              <h2>Ближайшие туры</h2>
+              <h2 data-content="Ближайшие туры">Ближайшие туры</h2>
               <div class="tours__inner swiper-wrapper">
                 <div class="tours__description swiper-slide">
                   <div class="tours__card-wrapper">
@@ -257,7 +315,7 @@
                           srcset="img/background/elbrus-tablet.jpg 1x, img/background/elbrus-tablet@2x.jpg 2x"
                           width="324" height="412">
                         <img src="img/background/elbrus.jpg" width="380" height="412"
-                          srcset="img/background/elbrus.jpg 2x" alt="Путешествие вокруг Эльбруса">
+                          srcset="img/background/elbrus.jpg 2x" alt="Путешествие вокруг Эльбруса" loading="lazy">
                       </picture>
                     </div>
                     <div class="tours__card-inner">
@@ -335,7 +393,7 @@
                         <source srcset="img/background/white-whale.webp 1x, img/background/white-whale@2x.webp 2x"
                           type="image/webp">
                         <img src="img/background/white-whale.jpg" width="380" height="412"
-                          srcset="img/background/white-whale.jpg 2x" alt="Путь к подножию Белухи ">
+                          srcset="img/background/white-whale.jpg 2x" alt="Путь к подножию Белухи " loading="lazy">
                       </picture>
                     </div>
                     <div class="tours__card-inner">
@@ -413,7 +471,7 @@
                         <source srcset="img/background/fisht.webp 1x, img/background/fisht@2x.webp 2x"
                           type="image/webp">
                         <img src="img/background/fisht.jpg" width="380" height="412"
-                          srcset="img/background/fisht.jpg 2x" alt="Через Фишт к Черному морю">
+                          srcset="img/background/fisht.jpg 2x" alt="Через Фишт к Черному морю" loading="lazy">
                       </picture>
                     </div>
                     <div class="tours__card-inner">
@@ -491,7 +549,7 @@
                         <source srcset="img/background/elbrus.webp 1x, img/background/elbrus@2x.webp 2x"
                           type="image/webp">
                         <img src="img/background/elbrus.jpg" width="380" height="412"
-                          srcset="img/background/elbrus.jpg 2x" alt="Путешествие вокруг Эльбруса">
+                          srcset="img/background/elbrus.jpg 2x" alt="Путешествие вокруг Эльбруса" loading="lazy">
                       </picture>
                     </div>
                     <div class="tours__card-inner">
@@ -569,7 +627,7 @@
                         <source srcset="img/background/white-whale.webp 1x, img/background/white-whale@2x.webp 2x"
                           type="image/webp">
                         <img src="img/background/white-whale.jpg" width="380" height="412"
-                          srcset="img/background/white-whale.jpg 2x" alt="Путь к подножию Белухи ">
+                          srcset="img/background/white-whale.jpg 2x" alt="Путь к подножию Белухи" loading="lazy">
                       </picture>
                     </div>
                     <div class="tours__card-inner">
@@ -647,7 +705,7 @@
                         <source srcset="img/background/fisht.webp 1x, img/background/fisht@2x.webp 2x"
                           type="image/webp">
                         <img src="img/background/fisht.jpg" width="380" height="412"
-                          srcset="img/background/fisht.jpg 2x" alt="Через Фишт к Черному морю">
+                          srcset="img/background/fisht.jpg 2x" alt="Через Фишт к Черному морю" loading="lazy">
                       </picture>
                     </div>
                     <div class="tours__card-inner">
@@ -747,7 +805,7 @@
               srcset="img/tours-bg-clouds2-mobile-2x.png 2x, img/tours-bg-clouds2-mobile-1x.png 1x" width="346"
               height="595">
             <img src="img/tours-bg-clouds2-desktop-1x.png" srcset="img/tours-bg-clouds2-desktop-2x.png 2x" width="1431"
-              height="1424" alt="Зеленые холмы в облаках.">
+              height="1424" alt="Зеленые холмы в облаках." loading="lazy">
           </picture>
         </div>
         <div class="tours__bg-clouds">
@@ -755,12 +813,12 @@
             <source type="image/webp" srcset="img/clouds/tours-clouds.webp 2x, img/clouds/tours-clouds.webp 1x"
               width="837" height="279">
             <img src="img/clouds/tours-clouds.png" srcset="img/clouds/tours-clouds@2x.png 2x" width="837" height="279"
-              alt="Облака.">
+              alt="Облака." loading="lazy">
           </picture>
         </div>
       </section>
-      <section class="training">
-        <h2>Обучение</h2>
+      <section class="training" id="training">
+        <h2 data-content="Обучение">Обучение</h2>
         <p>Обучение проводится квалифицированными специалистами, за&nbsp;плечами которых десятки пройденных маршрутов
           Кавказа, Крыма, Гималаев, Эльбруса, Алтая, Карелии, Адыгеи и&nbsp;других.</p>
         <div class="training__slider swiper">
@@ -789,7 +847,7 @@
                       srcset="img/trainer/alexander-prokofiev-mobile.jpg 1x, img/trainer/alexander-prokofiev-mobile@2x 2x"
                       width="250" height="212">
                     <img src="img/trainer/alexander-prokofiev.jpg" srcset="img/trainer/alexander-prokofiev@2x.jpg 2x"
-                      alt="Инструктор по подготовке." width="238" height="212">
+                      alt="Инструктор по подготовке." width="238" height="212" loading="lazy">
                   </picture>
                 </div>
                 <div class="trainer-card__inner">
@@ -828,7 +886,7 @@
                       srcset="img/trainer/svetlana-afinogenov-mobile.jpg 1x, img/trainer/svetlana-afinogenov-mobile@2x 2x"
                       width="250" height="212">
                     <img src="img/trainer/svetlana-afinogenov.jpg" srcset="img/trainer/svetlana-afinogenov@2x.jpg 2x"
-                      alt="Инструктор по подготовке." width="238" height="212">
+                      alt="Инструктор по подготовке." width="238" height="212" loading="lazy">
                   </picture>
                 </div>
                 <div class="trainer-card__inner">
@@ -868,7 +926,7 @@
                       srcset="img/trainer/hope-kolesnichenko-mobile.jpg 1x, img/trainer/hope-kolesnichenko-mobile@2x 2x"
                       width="250" height="212">
                     <img src="img/trainer/hope-kolesnichenko.jpg" srcset="img/trainer/hope-kolesnichenko@2x.jpg 2x"
-                      alt="Инструктор по подготовке." width="238" height="212">
+                      alt="Инструктор по подготовке." width="238" height="212" loading="lazy">
                   </picture>
                 </div>
                 <div class="trainer-card__inner">
@@ -908,7 +966,7 @@
                       srcset="img/trainer/fedor-kaigorodov-mobile.jpg 1x, img/trainer/fedor-kaigorodov-mobile@2x 2x"
                       width="250" height="212">
                     <img src="img/trainer/fedor-kaigorodov.jpg" srcset="img/trainer/fedor-kaigorodov@2x.jpg 2x"
-                      alt="Инструктор по подготовке." width="238" height="212">
+                      alt="Инструктор по подготовке." width="238" height="212" loading="lazy">
                   </picture>
                 </div>
                 <div class="trainer-card__inner">
@@ -948,7 +1006,7 @@
                       srcset="img/trainer/alexander-prokofiev-mobile.jpg 1x, img/trainer/alexander-prokofiev-mobile@2x 2x"
                       width="250" height="212">
                     <img src="img/trainer/alexander-prokofiev.jpg" srcset="img/trainer/alexander-prokofiev@2x.jpg 2x"
-                      alt="Инструктор по подготовке." width="238" height="212">
+                      alt="Инструктор по подготовке." width="238" height="212" loading="lazy">
                   </picture>
                 </div>
                 <div class="trainer-card__inner">
@@ -987,7 +1045,7 @@
                       srcset="img/trainer/svetlana-afinogenov-mobile.jpg 1x, img/trainer/svetlana-afinogenov-mobile@2x 2x"
                       width="250" height="212">
                     <img src="img/trainer/svetlana-afinogenov.jpg" srcset="img/trainer/svetlana-afinogenov@2x.jpg 2x"
-                      alt="Инструктор по подготовке." width="238" height="212">
+                      alt="Инструктор по подготовке." width="238" height="212" loading="lazy">
                   </picture>
                 </div>
                 <div class="trainer-card__inner">
@@ -1027,7 +1085,7 @@
                       srcset="img/trainer/hope-kolesnichenko-mobile.jpg 1x, img/trainer/hope-kolesnichenko-mobile@2x 2x"
                       width="250" height="212">
                     <img src="img/trainer/hope-kolesnichenko.jpg" srcset="img/trainer/hope-kolesnichenko@2x.jpg 2x"
-                      alt="Инструктор по подготовке." width="238" height="212">
+                      alt="Инструктор по подготовке." width="238" height="212" loading="lazy">
                   </picture>
                 </div>
                 <div class="trainer-card__inner">
@@ -1067,7 +1125,7 @@
                       srcset="img/trainer/fedor-kaigorodov-mobile.jpg 1x, img/trainer/fedor-kaigorodov-mobile@2x 2x"
                       width="250" height="212">
                     <img src="img/trainer/fedor-kaigorodov.jpg" srcset="img/trainer/fedor-kaigorodov@2x.jpg 2x"
-                      alt="Инструктор по подготовке." width="238" height="212">
+                      alt="Инструктор по подготовке." width="238" height="212" loading="lazy">
                   </picture>
                 </div>
                 <div class="trainer-card__inner">
@@ -1083,7 +1141,6 @@
                   районах Хибины, Архыз, много путешествует по&nbsp;Европе.</p>
               </div>
             </div>
-
           </div>
           <div
             class="training__button button training__button--prev swiper-button swiper-button--prev swiper-button-prev">
@@ -1143,7 +1200,7 @@
           </div>
         </div>
       </section>
-      <section class="about">
+      <section class="about" id="about">
         <div class="about__container">
           <div class="about__photo">
             <picture>
@@ -1155,7 +1212,7 @@
                 srcset="img/background/about-bg@2x.jpg 2x, img/background/about-bg.jpg 1x" width="685" height="402">
 
               <img src="img/background/about-bg.jpg" srcset="img/background/about-bg@2x.jpg 2x" width="808" height="474"
-                alt="Группа треккеров спускаются к озеру.">
+                alt="Группа треккеров спускаются к озеру." loading="lazy">
             </picture>
           </div>
           <div class="about__clouds">
@@ -1163,15 +1220,16 @@
               <source type="image/webp" srcset="img/clouds/about-clouds@2x.webp 2x, img/clouds/about-clouds.webp 1x"
                 width="840" height="280">
               <img src="img/clouds/about-clouds.png" srcset="img/clouds/about-clouds@2x.png 2x" width="840" height="280"
-                alt="Облака.">
+                alt="Облака." loading="lazy">
             </picture>
           </div>
-          <h2>О нас</h2>
+          <h2 data-content="О нас">О нас</h2>
           <div class="about__wrapper">
             <div class="about__inner">
               <h3>История компании</h3>
               <p>В&nbsp;далеком 2000 году мы&nbsp;начали заниматься туризмом - походы, поездки, восхождения,
-                нам это настолько понравилось, что мы этим стали жить. Спустя&nbsp;5&nbsp;лет, в&nbsp;2005&nbsp;году мы основали компанию, чтобы показывать людям удивительные места нашей страны.
+                нам это настолько понравилось, что мы этим стали жить. Спустя&nbsp;5&nbsp;лет, в&nbsp;2005&nbsp;году мы
+                основали компанию, чтобы показывать людям удивительные места нашей страны.
               </p>
             </div>
             <div class="about__inner">
@@ -1184,9 +1242,9 @@
           </div>
         </div>
       </section>
-      <section class="review">
+      <section class="review" id="review">
         <div class="review__slider swiper">
-          <h2>Отзывы</h2>
+          <h2 data-content="Отзывы">Отзывы</h2>
           <div class="review__wrapper swiper-wrapper">
 
             <div class="review__slide swiper-slide">
@@ -1212,7 +1270,7 @@
                       srcset="img/trainer/frolov-alexander-mobile.jpg 1x, img/trainer/frolov-alexander-mobile@2x.jpg 2x"
                       width="258" height="253">
                     <img src="img/trainer/frolov-alexander.jpg" srcset="img/trainer/frolov-alexander@2x.jpg 2x"
-                      alt="Фролов Александр." width="258" height="253">
+                      alt="Фролов Александр." width="258" height="253" loading="lazy">
                   </picture>
                 </div>
                 <div class="review__description">
@@ -1221,7 +1279,8 @@
                       Инструкторы&nbsp;- настоящие эксперты&nbsp;- всему научили, все показали.
                       Делились увлекательными историями о&nbsp;местах, людях, культуре места.
                     </p>
-                    <p>С&nbsp;уверенностью могу сказать, что жизнь разделилась&nbsp;на&nbsp;до этого и&nbsp;после. Еще никогда не отдыхал так душой и&nbsp;телом.
+                    <p>С&nbsp;уверенностью могу сказать, что жизнь разделилась&nbsp;на&nbsp;до этого и&nbsp;после. Еще
+                      никогда не отдыхал так душой и&nbsp;телом.
                       Всем очень рекомендую!
                     </p>
                   </div>
@@ -1256,7 +1315,7 @@
                       srcset="img/trainer/ivan-solovyov-mobile.jpg 1x, img/trainer/ivan-solovyov-mobile@2x.jpg 2x"
                       width="258" height="253">
                     <img src="img/trainer/ivan-solovyov.jpg" srcset="img/trainer/ivan-solovyov@2x.jpg 2x"
-                      alt="Иван Соловьев." width="258" height="253">
+                      alt="Иван Соловьев." width="258" height="253" loading="lazy">
                   </picture>
 
                 </div>
@@ -1303,7 +1362,7 @@
                       srcset="img/trainer/evgenia-bazhenova-mobile.jpg 1x, img/trainer/evgenia-bazhenova-mobile@2x.jpg 2x"
                       width="258" height="253">
                     <img src="img/trainer/evgenia-bazhenova.jpg" srcset="img/trainer/evgenia-bazhenova@2x.jpg 2x"
-                      alt="Евгения Баженова." width="258" height="253">
+                      alt="Евгения Баженова." width="258" height="253" loading="lazy">
                   </picture>
                 </div>
                 <div class="review__description">
@@ -1350,7 +1409,7 @@
                       srcset="img/trainer/elena-pirogova-mobile.jpg 1x, img/trainer/elena-pirogova-mobile@2x.jpg 2x"
                       width="258" height="253">
                     <img src="img/trainer/elena-pirogova.jpg" srcset="img/trainer/elena-pirogova@2x.jpg 2x"
-                      alt="Елена Пирогова." width="258" height="253">
+                      alt="Елена Пирогова." width="258" height="253" loading="lazy">
                   </picture>
                 </div>
                 <div class="review__description">
@@ -1389,12 +1448,12 @@
             <source type="image/webp" srcset="img/clouds/review-clouds@2x.webp 2x, img/clouds/review-clouds.webp 1x"
               width="1170" height="391">
             <img src="img/clouds/review-clouds.png" srcset="img/clouds/review-clouds@2x.png 2x" width="1170"
-              height="391" alt="Облака.">
+              height="391" alt="Облака." loading="lazy">
           </picture>
         </div>
       </section>
       <section class="advantages">
-        <h2>Преимущества</h2>
+        <h2 data-content="Преимущества">Преимущества</h2>
         <div class="advantages__slider swiper">
           <div class="advantages__wrapper swiper-wrapper">
 
@@ -1405,8 +1464,10 @@
                 </svg>
               </span>
               <h3>Безопасность и охрана</h3>
-              <p>Уделяем внимание безопасности клиентов, внедряя строгие процедуры и&nbsp;протоколы безопасности. Имеем планы
-                действий на&nbsp;случай непредвиденных обстоятельств и&nbsp;даем гарантию полной безопасности во&nbsp;время всего тура.
+              <p>Уделяем внимание безопасности клиентов, внедряя строгие процедуры и&nbsp;протоколы безопасности. Имеем
+                планы
+                действий на&nbsp;случай непредвиденных обстоятельств и&nbsp;даем гарантию полной безопасности
+                во&nbsp;время всего тура.
               </p>
             </div>
             <div class="advantages__slide swiper-slide">
@@ -1417,7 +1478,8 @@
               </span>
               <h3>Экспертиза и знания</h3>
               <p>Наша команда опытных гидов имеет обширные знания о местности, погодных условиях и технике безопасности.
-                Это гарантирует, что наши клиенты находятся в&nbsp;надежных руках и могут в полной мере насладиться опытом
+                Это гарантирует, что наши клиенты находятся в&nbsp;надежных руках и могут в полной мере насладиться
+                опытом
                 без опасений.</p>
             </div>
             <div class="advantages__slide swiper-slide">
@@ -1428,7 +1490,8 @@
               </span>
               <h3>Оборудование и снаряжение</h3>
               <p>Мы предоставляем клиентам все необходимое оборудование, необходимое для путешествия. Это избавляет
-                клиентов от&nbsp;необходимости покупать, брать с собой снаряжение, что&nbsp;делает путешествие более удобным и&nbsp;экономически выгодным.</p>
+                клиентов от&nbsp;необходимости покупать, брать с собой снаряжение, что&nbsp;делает путешествие более
+                удобным и&nbsp;экономически выгодным.</p>
             </div>
             <div class="advantages__slide swiper-slide">
               <span class="advantages__icon">
@@ -1448,7 +1511,8 @@
                 </svg>
               </span>
               <h3>Бережное отношение к&nbsp;природе</h3>
-              <p>Уделяем первостепенное внимание охране окружающей среды и&nbsp;гарантируем, что туры оказывают минимальное
+              <p>Уделяем первостепенное внимание охране окружающей среды и&nbsp;гарантируем, что туры оказывают
+                минимальное
                 воздействие на природную среду. Наша компания следует принципу «Не оставлять следов».</p>
             </div>
           </div>
@@ -1473,13 +1537,12 @@
               srcset="img/clouds/advantages-clouds@2x.webp 2x, img/clouds/advantages-clouds.webp 1x" width="1170"
               height="391">
             <img src="img/clouds/advantages-clouds.png" srcset="img/clouds/advantages-clouds@2x.png 2x" width="1170"
-              height="391" alt="Облака.">
+              height="391" alt="Облака." loading="lazy">
           </picture>
         </div>
       </section>
-
-      <section class="gallery">
-        <h2>Фотогалерея</h2>
+      <section class="gallery" id="gallery">
+        <h2 data-content="Фотогалерея">Фотогалерея</h2>
         <div class="gallery__slider swiper">
           <p>Добавляйте фото в Instagram с хэштегом #лайфтур, а также отмечайте нас на фото.
             Лучшие фотографии украсят этот раздел нашего сайта.</p>
@@ -1505,7 +1568,7 @@
                   <source type="image/webp" srcset="img/gallery/photo-1@2x.webp 2x, img/gallery/photo-1.webp 1x"
                     width="275" height="449">
                   <img src="img/gallery/photo-1.jpg" srcset="img/gallery/photo-1@2x.jpg 2x" width="275" height="449"
-                    alt="Человек на вершине горы.">
+                    alt="Человек на вершине горы." loading="lazy">
                 </picture>
               </div>
             </div>
@@ -1515,13 +1578,13 @@
                   <source type="image/webp" srcset="img/gallery/photo-2@2x.webp 2x, img/gallery/photo-2.webp 1x"
                     width="298" height="179">
                   <img src="img/gallery/photo-2.jpg" srcset="img/gallery/photo-2@2x.jpg 2x" width="298" height="179"
-                    alt="Группа трекеров у костра.">
+                    alt="Группа трекеров у костра." loading="lazy">
                 </picture>
                 <picture>
                   <source type="image/webp" srcset="img/gallery/photo-3@2x.webp 2x, img/gallery/photo-3.webp 1x"
                     width="298" height="265">
                   <img src="img/gallery/photo-3.jpg" srcset="img/gallery/photo-3@2x.jpg 2x" width="298" height="265"
-                    alt="Человек с компасом на вершине горы.">
+                    alt="Человек с компасом на вершине горы." loading="lazy">
                 </picture>
               </div>
             </div>
@@ -1531,7 +1594,7 @@
                   <source type="image/webp" srcset="img/gallery/photo-4@2x.webp 2x, img/gallery/photo-4.webp 1x"
                     width="272" height="449">
                   <img src="img/gallery/photo-4.jpg" srcset="img/gallery/photo-4@2x.jpg 2x" width="272" height="449"
-                    alt="Группа треккеров покоряют вершину.">
+                    alt="Группа треккеров покоряют вершину." loading="lazy">
                 </picture>
               </div>
             </div>
@@ -1541,13 +1604,13 @@
                   <source type="image/webp" srcset="img/gallery/photo-5@2x.webp 2x, img/gallery/photo-5.webp 1x"
                     width="298" height="179">
                   <img src="img/gallery/photo-5.jpg" srcset="img/gallery/photo-5@2x.jpg 2x" width="298" height="179"
-                    alt="Группа трекеров на заснеженной дороге.">
+                    alt="Группа трекеров на заснеженной дороге." loading="lazy">
                 </picture>
                 <picture>
                   <source type="image/webp" srcset="img/gallery/photo-6@2x.webp 2x, img/gallery/photo-6.webp 1x"
                     width="298" height="265">
                   <img src="img/gallery/photo-6.jpg" srcset="img/gallery/photo-6@2x.jpg 2x" width="298" height="265"
-                    alt="Палатка в горах.">
+                    alt="Палатка в горах." loading="lazy">
                 </picture>
               </div>
             </div>
@@ -1557,7 +1620,7 @@
                   <source type="image/webp" srcset="img/gallery/photo-7@2x.webp 2x, img/gallery/photo-7.webp 1x"
                     width="276" height="449">
                   <img src="img/gallery/photo-7.jpg" srcset="img/gallery/photo-7@2x.jpg 2x" width="276" height="449"
-                    alt="Два мужчины у костра в горах.">
+                    alt="Два мужчины у костра в горах." loading="lazy">
                 </picture>
               </div>
             </div>
@@ -1567,7 +1630,7 @@
                   <source type="image/webp" srcset="img/gallery/photo-1@2x.webp 2x, img/gallery/photo-1.webp 1x"
                     width="275" height="449">
                   <img src="img/gallery/photo-1.jpg" srcset="img/gallery/photo-1@2x.jpg 2x" width="275" height="449"
-                    alt="Человек на вершине горы.">
+                    alt="Человек на вершине горы." loading="lazy">
                 </picture>
               </div>
             </div>
@@ -1577,13 +1640,13 @@
                   <source type="image/webp" srcset="img/gallery/photo-2@2x.webp 2x, img/gallery/photo-2.webp 1x"
                     width="298" height="179">
                   <img src="img/gallery/photo-2.jpg" srcset="img/gallery/photo-2@2x.jpg 2x" width="298" height="179"
-                    alt="Группа трекеров у костра.">
+                    alt="Группа трекеров у костра." loading="lazy">
                 </picture>
                 <picture>
                   <source type="image/webp" srcset="img/gallery/photo-3@2x.webp 2x, img/gallery/photo-3.webp 1x"
                     width="298" height="265">
                   <img src="img/gallery/photo-3.jpg" srcset="img/gallery/photo-3@2x.jpg 2x" width="298" height="265"
-                    alt="Человек с компасом на вершине горы.">
+                    alt="Человек с компасом на вершине горы." loading="lazy">
                 </picture>
               </div>
             </div>
@@ -1593,7 +1656,7 @@
                   <source type="image/webp" srcset="img/gallery/photo-4@2x.webp 2x, img/gallery/photo-4.webp 1x"
                     width="272" height="449">
                   <img src="img/gallery/photo-4.jpg" srcset="img/gallery/photo-4@2x.jpg 2x" width="272" height="449"
-                    alt="Группа треккеров покоряют вершину.">
+                    alt="Группа треккеров покоряют вершину." loading="lazy">
                 </picture>
               </div>
             </div>
@@ -1603,13 +1666,13 @@
                   <source type="image/webp" srcset="img/gallery/photo-5@2x.webp 2x, img/gallery/photo-5.webp 1x"
                     width="298" height="179">
                   <img src="img/gallery/photo-5.jpg" srcset="img/gallery/photo-5@2x.jpg 2x" width="298" height="179"
-                    alt="Группа трекеров на заснеженной дороге.">
+                    alt="Группа трекеров на заснеженной дороге." loading="lazy">
                 </picture>
                 <picture>
                   <source type="image/webp" srcset="img/gallery/photo-6@2x.webp 2x, img/gallery/photo-6.webp 1x"
                     width="298" height="265">
                   <img src="img/gallery/photo-6.jpg" srcset="img/gallery/photo-6@2x.jpg 2x" width="298" height="265"
-                    alt="Палатка в горах.">
+                    alt="Палатка в горах." loading="lazy">
                 </picture>
               </div>
             </div>
@@ -1619,27 +1682,26 @@
                   <source type="image/webp" srcset="img/gallery/photo-7@2x.webp 2x, img/gallery/photo-7.webp 1x"
                     width="276" height="449">
                   <img src="img/gallery/photo-7.jpg" srcset="img/gallery/photo-7@2x.jpg 2x" width="276" height="449"
-                    alt="Два мужчины у костра в горах.">
+                    alt="Два мужчины у костра в горах." loading="lazy">
                 </picture>
               </div>
             </div>
           </div>
         </div>
       </section>
-
       <section class="faq" data-form-validate="data-form-validate" data-callback="base">
         <h2>Остались вопросы?</h2>
         <p>Заполните форму и наш оператор свяжется с вами для консультации.</p>
-        <form class="faq__form" action="https://echo.htmlacademy.ru" method="post">
+        <form action="https://echo.htmlacademy.ru/" method="post" novalidate>
           <div class="faq__input faq__input--name" data-validate-type="text" data-limitation="name"
             data-required="data-required">
-            <label aria-label="Ваше имя.">
-              <input type="text" name="user-name-4" placeholder="Как к вам обращаться?" required>
+            <label aria-label="Ваше имя." for="user-name-1">
+              <input type="text" name="user-name-1" id="user-name-1" placeholder="Как к вам обращаться?" required>
             </label>
           </div>
           <div class="faq__input faq__input--phone" data-validate-type="phone" data-required="data-required">
-            <label aria-label="Ваш номер телефона.">
-              <input type="tel" name="user-phone" placeholder="Телефон" required>
+            <label aria-label="Ваш номер телефона." for="phone">
+              <input type="tel" name="user-phone" id="phone" placeholder="Телефон" required>
             </label>
           </div>
           <button class="faq__button button" type="submit">Отправить</button>
@@ -1662,15 +1724,16 @@
               srcset="img/background/faq-bg-mobile@2x.jpg 2x, img/background/faq-bg-mobile.jpg 1x" width="320"
               height="621">
             <img src="img/background/faq-bg.jpg" srcset="img/background/faq-bg@2x.jpg 2x" width="1440" height="800"
-              alt="Хвойный лес.">
+              alt="Хвойный лес." loading="lazy">
           </picture>
         </div>
       </section>
-      <section class="contacts">
-        <h2>Контакты</h2>
+      <section class="contacts" id="contacts">
+        <h2 data-content="Контакты">Контакты</h2>
         <div class="contacts__container container">
           <div class="contacts__wrapper">
-            <p>Свяжитесь с&nbsp;нами любым удобным для вас способом или приходите к&nbsp;нам в&nbsp;гости. Мы&nbsp;будем&nbsp;рады поделиться увлекательными историями и&nbsp;подобрать для вас тур.
+            <p>Свяжитесь с&nbsp;нами любым удобным для вас способом или приходите к&nbsp;нам в&nbsp;гости.
+              Мы&nbsp;будем&nbsp;рады поделиться увлекательными историями и&nbsp;подобрать для вас тур.
             </p>
             <ul class="contacts__list">
               <li class="contacts__item">
@@ -1713,19 +1776,18 @@
 
 
       </section>
-
     </main>
     <footer>
       <section class="footer">
         <div class="container">
           <h2 class="visually-hidden">Подвал сайта</h2>
           <div class="footer__wrapper">
-            <a class="footer__logo">
+            <a class="footer__logo" aria-label="Логотип LifeTour." href="index.html">
               <picture>
                 <source media="(min-width: 1200px)" srcset="img/svg/logo-footer.svg" width="205" height="60">
                 <source media="(min-width: 768px)" srcset="img/svg/logo-footer.svg" width="118" height="34">
                 <source media="(min-width: 320px)" srcset="img/svg/logo-footer.svg" width="112" height="34">
-                <img src="img/svg/logo-footer.svg" width="205" height="60" alt="логотип LifeTour">
+                <img src="img/svg/logo-footer.svg" width="205" height="60" alt="логотип LifeTour" loading="lazy">
               </picture>
             </a>
             <div class="footer__inner">
@@ -1734,19 +1796,19 @@
                   <a class="footer__link" href="index.html">Туры</a>
                 </li>
                 <li class="footer__item">
-                  <a class="footer__link" href="#nowhere">Обучение</a>
+                  <a class="footer__link" href="#training">Обучение</a>
                 </li>
                 <li class="footer__item">
-                  <a class="footer__link" href="#nowhere">О нас</a>
+                  <a class="footer__link" href="#about">О нас</a>
                 </li>
                 <li class="footer__item">
-                  <a class="footer__link" href="#nowhere">Отзывы</a>
+                  <a class="footer__link" href="#review">Отзывы</a>
                 </li>
                 <li class="footer__item">
-                  <a class="footer__link" href="#nowhere">Фотографии</a>
+                  <a class="footer__link" href="#gallery">Фотографии</a>
                 </li>
                 <li class="footer__item">
-                  <a class="footer__link" href="#nowhere">Контакты</a>
+                  <a class="footer__link" href="#contacts">Контакты</a>
                 </li>
               </ul>
             </div>
@@ -1789,7 +1851,6 @@
 
   <script src="js/vendor.min.js" defer></script>
   <script src="js/main.min.js" defer></script>
-  <script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js"></script>
 </body>
 
 </html>

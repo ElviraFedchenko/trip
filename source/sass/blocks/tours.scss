@@ -5,11 +5,6 @@
     flex-direction: column;
     width: 100%;
 
-    @media (max-width: 1279px) {
-      padding-left: 45px;
-      padding-right: 45px;
-    }
-
     @include tablet-width {
       padding: 0 45px;
     }
@@ -58,8 +53,8 @@
     }
   }
 
-  &__slider h2::after {
-    content: "Ближайшие туры";
+  &__slider h2[data-content]::after {
+    content: attr(data-content);
     font-size: 55px;
     color: rgba(45, 56, 63, 0.03);
     margin-left: -344px;

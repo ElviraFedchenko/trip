@@ -37,8 +37,8 @@
       padding-bottom: 29px;
     }
 
-    &::after {
-      content: "Преимущества";
+    &[data-content]::after {
+      content: attr(data-content);
       font-size: 55px;
       color: rgba(45, 56, 63, 0.03);
       margin-left: -378px;

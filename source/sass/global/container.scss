@@ -5,11 +5,6 @@
   margin: 0 auto;
   padding: 0 120px;
 
-  @media (max-width: 1279px) {
-    padding-left: 40px;
-    padding-right: 40px;
-  }
-
   @include tablet-width {
     max-width: 768px;
     padding: 0 45px;

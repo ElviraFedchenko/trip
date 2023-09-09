@@ -2,14 +2,14 @@ import { iosVhFix } from './utils/ios-vh-fix';
 import { initModals } from './modules/modals/init-modals';
 import { Form } from './modules/form-validate/form';
 import { initHeroSwiper, initToursSwiper, initTrainerSwiper, initReviewSwiper, initAdvantagesSwiper, initGallerySwiper } from './vendor.js';
-
+import  './vendor/leaflet';
 // ---------------------------------
+
 
 window.addEventListener('DOMContentLoaded', () => {
 
   // Utils
   // ---------------------------------
-
   iosVhFix();
   initHeroSwiper();
   initToursSwiper();

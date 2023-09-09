@@ -20,8 +20,7 @@
     }
 
     @include mobile-width {
-      max-width: 290px;
-      width: unset;
+      width: 95%;
       min-height: 385px;
       padding: 20px;
     }
@@ -52,6 +51,7 @@
   &__inner {
     width: 100%;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     padding: 15px 0 14px;

@@ -7,10 +7,6 @@
   width: 482px;
   height: 317px;
 
-  @media (max-width: 1279px) {
-    padding-right: 40px;
-  }
-
   @include tablet-width {
     position: relative;
     width: 442px;
@@ -31,6 +27,7 @@
 
   &__video--enabled {
     display: block;
+    z-index: 1;
 
     @include mobile-width {
       display: none;
@@ -64,6 +61,7 @@
     svg {
       transform: translate(-14%, -5%);
       fill: transparent;
+      stroke: $color-default-white;
     }
 
     &:hover circle {
@@ -76,12 +74,15 @@
       stroke-opacity: 1;
     }
 
-    &:active {
+    &:active svg {
       color: $color-resolution-blue;
+      stroke: $color-resolution-blue;
     }
 
     &:active circle {
       fill-opacity: 1;
+      color: $color-resolution-blue;
+      stroke: $color-resolution-blue;
     }
 
     &:active path {
