@@ -1,11 +1,12 @@
 .audio {
   position: absolute;
-  right: 120px;
   left: auto;
   top: 37%;
   width: fit-content;
   height: auto;
   display: flex;
+  z-index: 1;
+  right: calc(50% - 600px);
 
 
   @include tablet-width {

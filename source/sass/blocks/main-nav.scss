@@ -45,10 +45,7 @@
   &__container {
     width: 100%;
     display: grid;
-    -ms-grid-columns: 205px 1fr 164px;
     grid-template-columns: 205px 1fr 164px;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
     justify-content: space-between;
 
     @include tablet-width {
@@ -63,7 +60,6 @@
   &__inner {
     padding: 0 0 0 13px;
     margin: 0;
-    z-index: -1;
     width: 100%;
     display: flex;
     flex-wrap: wrap;
@@ -76,6 +72,7 @@
       &--is-active {
         display: block;
         position: fixed;
+        z-index: -1;
         top: 0;
         bottom: 0;
         left: 0;
@@ -83,13 +80,25 @@
         overflow: hidden;
         background-color: rgba(0, 0, 0, 0.5);
         padding: 0;
+        overflow-y: auto;
+
+        .main-nav__list {
+          overflow-y: scroll;
+
+          @include tablet-width {
+            max-height: 56vh;
+          }
+
+          @include mobile-width {
+            max-height: 54vh;
+          }
+        }
       }
     }
   }
 
   &__top {
     position: absolute;
-    font-family: $montserrat;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -98,11 +107,6 @@
     padding-top: 40px;
     z-index: 3;
     width: 100%;
-
-    @media (max-width: 1279px) {
-      padding-left: 40px;
-      padding-right: 40px;
-    }
 
     @include tablet-width {
       padding: 30px 16px 0 45px;
@@ -116,6 +120,7 @@
   }
 
   &__list {
+    width: 100%;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -127,16 +132,13 @@
     row-gap: 10px;
 
     @include tablet-width {
-      flex-direction: column;
-      justify-content: flex-start;
-      gap: 26px;
-      padding: 124px 45px 70px 45px;
+      display: block;
+      padding: 124px 45px 44px 45px;
       background-color: $color-default-white;
-      align-items: start;
     }
 
     @include mobile-width {
-      gap: 22px;
+      padding: 124px 15px 38px 15px;
     }
   }
 
@@ -152,17 +154,64 @@
     }
   }
 
+  &__item {
+    @include tablet-width {
+      padding-bottom: 26px;
+    }
+
+    @include mobile-width {
+      padding-bottom: 22px;
+    }
+  }
+
 
   &__link {
     color: $color-default-white;
     font-weight: 400;
     font-size: 16px;
     line-height: 16px;
+    position: relative;
+
+
+    &:hover {
+      &::before {
+        content: "";
+        height: 1px;
+        background-color: $color-default-white;
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: -3px;
+        z-index: 3;
+      }
+    }
+
+    &:focus {
+      outline: 1px solid $color-default-white;
+      outline-offset: 3px;
+    }
+
+    &:active {
+      outline: none;
+
+      &::before {
+        display: none;
+      }
+    }
+
+    &:disabled {
+      color: rgba($color-default-white, 0.5);
+    }
 
     @include tablet-width {
       font-weight: 700;
       text-transform: uppercase;
       color: #2d383f;
+    }
+
+    @include mobile-width {
+      font-size: 14px;
+      line-height: 14px;
     }
   }
 

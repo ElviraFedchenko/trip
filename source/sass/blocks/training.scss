@@ -33,8 +33,8 @@
     }
   }
 
-  & h2::after {
-    content: "Обучение";
+  & h2[data-content]::after {
+    content: attr(data-content);
     font-size: 55px;
     color: rgba(45, 56, 63, 0.03);
     margin-left: -191px;

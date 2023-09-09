@@ -14,10 +14,6 @@
     padding: 0 calc(50% - 600px);
     padding-bottom: 26px;
 
-    @media (max-width: 1279px) {
-      padding-left: 40px;
-    }
-
     @include tablet-width {
       padding-left: 45px;
     }
@@ -27,8 +23,8 @@
       padding-bottom: 15px;
     }
 
-    &::after {
-      content: "Фотогалерея";
+    &[data-content]::after {
+      content: attr(data-content);
       font-size: 55px;
       color: rgba(45, 56, 63, 0.03);
       margin-left: -252px;
@@ -53,10 +49,6 @@
       width: 68%;
       padding-bottom: 45px;
       color: $color-elephant;
-
-      @media (max-width: 1279px) {
-        padding-left: 40px;
-      }
 
       @include tablet-width {
         padding-left: 45px;
@@ -101,7 +93,7 @@
         aspect-ratio: 298 / 179;
       }
 
-      & picture:nth-child(2) img {
+      & picture:nth-child(2n) img {
         aspect-ratio: 298 / 265;
       }
 

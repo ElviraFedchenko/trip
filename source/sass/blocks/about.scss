@@ -30,11 +30,6 @@
     width: 808px;
     height: 474px;
 
-    @media (max-width: 1279px) {
-      left: auto;
-      right: 37.1%;
-    }
-
     @include tablet-width {
       width: 685px;
       height: 402px;
@@ -89,8 +84,8 @@
   h2 {
     width: 50%;
 
-    &::after {
-      content: "О нас";
+    &[data-content]::after {
+      content: attr(data-content);
       font-size: 55px;
       color: rgba(45, 56, 63, 0.03);
       margin-left: -107px;

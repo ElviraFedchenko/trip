@@ -5,11 +5,6 @@
     padding-bottom: 22px;
     padding-top: 76px;
 
-    @media (max-width: 1279px) {
-      margin: 0 auto;
-      padding-left: 40px;
-    }
-
     @include tablet-width {
       max-width: 768px;
       padding: 0 45px;
@@ -23,8 +18,8 @@
       padding-top: 63px;
     }
 
-    &::after {
-      content: "Контакты";
+    &[data-content]::after {
+      content: attr(data-content);
       font-size: 55px;
       color: rgba(45, 56, 63, 0.03);
       margin-left: -190px;
