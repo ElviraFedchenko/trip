@@ -5,8 +5,8 @@
   width: fit-content;
   height: auto;
   display: flex;
-  z-index: 1;
-  right: calc(50% - 600px);
+  z-index: 2;
+  right: 120px;
 
 
   @include tablet-width {

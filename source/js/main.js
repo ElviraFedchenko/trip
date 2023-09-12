@@ -159,7 +159,7 @@ const openMenu = function openMenu() {
 menuToggle.addEventListener('click', openMenu);
 
 
-const map = L.map('map').setView([55.813152, 37.633832], 13);
+const map = L.map('map', {scrollWheelZoom: false, dragging: false}).setView([55.813152, 37.633832], 13);
 
 L.tileLayer(
   'https://tile.openstreetmap.org/{z}/{x}/{y}.png',
