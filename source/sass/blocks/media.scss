@@ -2,7 +2,7 @@
   position: absolute;
   left: auto;
   top: 38%;
-  right: 120px;
+  right: calc(50% - 600px);
   display: flex;
   width: 482px;
   height: 317px;
@@ -47,7 +47,7 @@
     position: absolute;
     top: 50%;
     left: 56%;
-    transform: translate(-50%, -50%);
+    transform: translate(-100%, -59%);
     color: transparent;
     border-radius: 50%;
     width: 56px;
@@ -59,7 +59,7 @@
     }
 
     svg {
-      transform: translate(-55%, -5%);
+      transform: translate(0%, 2%);
       fill: transparent;
       stroke: $color-default-white;
     }
