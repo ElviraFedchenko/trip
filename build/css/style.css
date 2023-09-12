@@ -1235,6 +1235,7 @@ button.swiper-pagination-bullet {
 }
 
 /* required styles */
+/* stylelint-disable */
 .leaflet-pane,
 .leaflet-tile,
 .leaflet-marker-icon,
@@ -1400,7 +1401,8 @@ button.swiper-pagination-bullet {
 .leaflet-control {
   position: relative;
   z-index: 800;
-  pointer-events: visiblePainted; /* IE 9-10 doesn't have auto */
+  pointer-events: visiblePainted;
+  /* IE 9-10 doesn't have auto */
   pointer-events: auto;
 }
 
@@ -1535,13 +1537,14 @@ button.swiper-pagination-bullet {
 .leaflet-image-layer.leaflet-interactive,
 .leaflet-pane > svg path.leaflet-interactive,
 svg.leaflet-image-layer.leaflet-interactive path {
-  pointer-events: visiblePainted; /* IE 9-10 doesn't have auto */
+  pointer-events: visiblePainted;
+  /* IE 9-10 doesn't have auto */
   pointer-events: auto;
 }
 
 /* visual tweaks */
 .leaflet-container {
-  background: #ddd;
+  background: #dddddd;
   outline: 0;
 }
 
@@ -1572,8 +1575,8 @@ svg.leaflet-image-layer.leaflet-interactive path {
 
 .leaflet-bar a,
 .leaflet-bar a:hover {
-  background-color: #fff;
-  border-bottom: 1px solid #ccc;
+  background-color: #ffffff;
+  border-bottom: 1px solid #cccccc;
   width: 26px;
   height: 26px;
   line-height: 26px;
@@ -1608,7 +1611,7 @@ svg.leaflet-image-layer.leaflet-interactive path {
 .leaflet-bar a.leaflet-disabled {
   cursor: default;
   background-color: #f4f4f4;
-  color: #bbb;
+  color: #bbbbbb;
 }
 
 .leaflet-touch .leaflet-bar a {
@@ -1634,7 +1637,8 @@ svg.leaflet-image-layer.leaflet-interactive path {
   text-indent: 1px;
 }
 
-.leaflet-touch .leaflet-control-zoom-in, .leaflet-touch .leaflet-control-zoom-out {
+.leaflet-touch .leaflet-control-zoom-in,
+.leaflet-touch .leaflet-control-zoom-out {
   font-size: 22px;
 }
 
@@ -1642,7 +1646,7 @@ svg.leaflet-image-layer.leaflet-interactive path {
 .leaflet-control-layers {
   -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.4);
           box-shadow: 0 1px 5px rgba(0, 0, 0, 0.4);
-  background: #fff;
+  background: #ffffff;
   border-radius: 5px;
 }
 
@@ -1674,8 +1678,8 @@ svg.leaflet-image-layer.leaflet-interactive path {
 
 .leaflet-control-layers-expanded {
   padding: 6px 10px 6px 6px;
-  color: #333;
-  background: #fff;
+  color: #333333;
+  background: #ffffff;
 }
 
 .leaflet-control-layers-scrollbar {
@@ -1696,7 +1700,7 @@ svg.leaflet-image-layer.leaflet-interactive path {
 
 .leaflet-control-layers-separator {
   height: 0;
-  border-top: 1px solid #ddd;
+  border-top: 1px solid #dddddd;
   margin: 5px -10px 5px -6px;
 }
 
@@ -1707,7 +1711,7 @@ svg.leaflet-image-layer.leaflet-interactive path {
 
 /* attribution and scale controls */
 .leaflet-container .leaflet-control-attribution {
-  background: #fff;
+  background: #ffffff;
   background: rgba(255, 255, 255, 0.7);
   margin: 0;
 }
@@ -1715,7 +1719,7 @@ svg.leaflet-image-layer.leaflet-interactive path {
 .leaflet-control-attribution,
 .leaflet-control-scale-line {
   padding: 0 5px;
-  color: #333;
+  color: #333333;
 }
 
 .leaflet-control-attribution a {
@@ -1740,7 +1744,7 @@ svg.leaflet-image-layer.leaflet-interactive path {
 }
 
 .leaflet-control-scale-line {
-  border: 2px solid #777;
+  border: 2px solid #777777;
   border-top: none;
   line-height: 1.1;
   padding: 2px 5px 1px;
@@ -1749,18 +1753,18 @@ svg.leaflet-image-layer.leaflet-interactive path {
   overflow: hidden;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  background: #fff;
+  background: #ffffff;
   background: rgba(255, 255, 255, 0.5);
 }
 
 .leaflet-control-scale-line:not(:first-child) {
-  border-top: 2px solid #777;
+  border-top: 2px solid #777777;
   border-bottom: none;
   margin-top: -2px;
 }
 
 .leaflet-control-scale-line:not(:first-child):not(:last-child) {
-  border-bottom: 2px solid #777;
+  border-bottom: 2px solid #777777;
 }
 
 .leaflet-touch .leaflet-control-attribution,
@@ -1820,8 +1824,8 @@ svg.leaflet-image-layer.leaflet-interactive path {
 
 .leaflet-popup-content-wrapper,
 .leaflet-popup-tip {
-  background: white;
-  color: #333;
+  background: #ffffff;
+  color: #333333;
   -webkit-box-shadow: 0 3px 14px rgba(0, 0, 0, 0.4);
           box-shadow: 0 3px 14px rgba(0, 0, 0, 0.4);
 }
@@ -1843,13 +1847,13 @@ svg.leaflet-image-layer.leaflet-interactive path {
 }
 
 .leaflet-container a.leaflet-popup-close-button:hover {
-  color: #999;
+  color: #999999;
 }
 
 .leaflet-popup-scrolled {
   overflow: auto;
-  border-bottom: 1px solid #ddd;
-  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #dddddd;
+  border-top: 1px solid #dddddd;
 }
 
 .leaflet-oldie .leaflet-popup-content-wrapper {
@@ -1871,12 +1875,12 @@ svg.leaflet-image-layer.leaflet-interactive path {
 .leaflet-oldie .leaflet-control-layers,
 .leaflet-oldie .leaflet-popup-content-wrapper,
 .leaflet-oldie .leaflet-popup-tip {
-  border: 1px solid #999;
+  border: 1px solid #999999;
 }
 
 /* div icon */
 .leaflet-div-icon {
-  background: #fff;
+  background: #ffffff;
   border: 1px solid #666;
 }
 
@@ -1885,8 +1889,8 @@ svg.leaflet-image-layer.leaflet-interactive path {
 .leaflet-tooltip {
   position: absolute;
   padding: 6px;
-  background-color: #fff;
-  border: 1px solid #fff;
+  background-color: #ffffff;
+  border: 1px solid #ffffff;
   border-radius: 3px;
   color: #222;
   white-space: nowrap;
@@ -1933,14 +1937,14 @@ svg.leaflet-image-layer.leaflet-interactive path {
 .leaflet-tooltip-top:before {
   bottom: 0;
   margin-bottom: -12px;
-  border-top-color: #fff;
+  border-top-color: #ffffff;
 }
 
 .leaflet-tooltip-bottom:before {
   top: 0;
   margin-top: -12px;
   margin-left: -6px;
-  border-bottom-color: #fff;
+  border-bottom-color: #ffffff;
 }
 
 .leaflet-tooltip-left {
@@ -1960,13 +1964,13 @@ svg.leaflet-image-layer.leaflet-interactive path {
 .leaflet-tooltip-left:before {
   right: 0;
   margin-right: -12px;
-  border-left-color: #fff;
+  border-left-color: #ffffff;
 }
 
 .leaflet-tooltip-right:before {
   left: 0;
   margin-left: -12px;
-  border-right-color: #fff;
+  border-right-color: #ffffff;
 }
 
 @font-face {
@@ -3685,7 +3689,7 @@ button,
   top: 30%;
   height: auto;
   z-index: 1;
-  right: calc(50% - 600px);
+  right: 120px;
 }
 @media (max-width: 1199px) {
   .hero__photo {
@@ -3732,7 +3736,7 @@ button,
   position: absolute;
   left: auto;
   top: 38%;
-  right: calc(50% - 600px);
+  right: 120px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3760,7 +3764,7 @@ button,
 }
 .media__video--enabled {
   display: block;
-  z-index: 1;
+  z-index: 2;
 }
 @media (max-width: 767px) {
   .media__video--enabled {
@@ -3778,7 +3782,7 @@ button,
 .media__button {
   position: absolute;
   top: 50%;
-  left: 52%;
+  left: 56%;
   -webkit-transform: translate(-50%, -50%);
       -ms-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
@@ -3794,9 +3798,9 @@ button,
   }
 }
 .media__button svg {
-  -webkit-transform: translate(-14%, -5%);
-      -ms-transform: translate(-14%, -5%);
-          transform: translate(-14%, -5%);
+  -webkit-transform: translate(-55%, -5%);
+      -ms-transform: translate(-55%, -5%);
+          transform: translate(-55%, -5%);
   fill: transparent;
   stroke: #ffffff;
 }
@@ -3840,8 +3844,8 @@ button,
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  z-index: 1;
-  right: calc(50% - 600px);
+  z-index: 2;
+  right: 120px;
 }
 @media (max-width: 1199px) {
   .audio {
@@ -4005,7 +4009,7 @@ button,
 }
 @media (max-width: 767px) {
   .tours__container {
-    max-width: 320px;
+    max-width: 100%;
     padding: 0 15px;
   }
 }
@@ -4100,7 +4104,7 @@ button,
 @media (max-width: 767px) {
   .tours__card-wrapper {
     aspect-ratio: 290/412;
-    max-width: 290px;
+    max-width: 100%;
     margin: 0 auto;
   }
 }
@@ -4124,8 +4128,8 @@ button,
 }
 @media (max-width: 767px) {
   .tours__photo {
-    width: 290px;
-    height: 412px;
+    width: 100%;
+    height: 100%;
   }
 }
 .tours__photo img {
@@ -4501,7 +4505,6 @@ button,
 @media (max-width: 767px) {
   .training h3 {
     font-size: 16px;
-    padding-bottom: 0;
     margin-left: 14px;
   }
 }
@@ -5294,7 +5297,6 @@ button,
 @media (max-width: 767px) {
   .advantages__slider {
     padding-top: 0;
-    padding-bottom: 0;
   }
 }
 .advantages h2 {
@@ -5663,7 +5665,7 @@ button,
   .faq {
     padding: 0 calc(50% - 148px);
     padding-top: 25.3%;
-    padding-bottom: 28.8%;
+    padding-bottom: 23.8%;
   }
 }
 @media (max-width: 767px) {
@@ -5876,8 +5878,7 @@ button,
   .contacts h2 {
     max-width: 768px;
     padding: 0 45px;
-    padding-bottom: 0;
-    padding-top: 41px;
+    padding-top: 80px;
   }
 }
 @media (max-width: 767px) {
