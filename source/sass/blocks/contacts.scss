@@ -7,14 +7,12 @@
 
     @include tablet-width {
       max-width: 768px;
-      padding: 0 45px;
-      padding-top: 80px;
+      padding: 80px 45px 0 45px;
     }
 
     @include mobile-width {
       max-width: 320px;
-      padding: 0 15px;
-      padding-top: 63px;
+      padding: 63px 15px 0 15px;
     }
 
     &[data-content]::after {

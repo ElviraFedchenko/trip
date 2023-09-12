@@ -1204,13 +1204,17 @@ button.swiper-pagination-bullet {
     margin: 6px;
   }
 }
+.swiper-pagination.swiper-pagination-bullets .swiper-pagination-bullet:hover {
+  border: 1px solid #0266c1;
+}
 
 .swiper-pagination.swiper-pagination-bullets .swiper-pagination-bullet-active {
   border: 1px solid #fff;
   background: #fff;
 }
 
-.swiper-button-next.swiper-button-disabled, .swiper-button-prev.swiper-button-disabled {
+.swiper-button-next.swiper-button-disabled,
+.swiper-button-prev.swiper-button-disabled {
   opacity: 0.35;
   cursor: auto;
   pointer-events: none;
@@ -3542,7 +3546,6 @@ button,
       -ms-flex-direction: column;
           flex-direction: column;
   width: 100%;
-  z-index: 2;
 }
 @media (max-width: 1199px) {
   .hero__text {
@@ -3577,6 +3580,7 @@ button,
 }
 .hero__text-wrapper {
   max-width: 38%;
+  z-index: 2;
 }
 @media (max-width: 1199px) {
   .hero__text-wrapper {
@@ -3669,6 +3673,7 @@ button,
 .hero__toggle {
   width: 18%;
   padding: 22px;
+  z-index: 2;
 }
 @media (max-width: 1199px) {
   .hero__toggle {
@@ -3689,7 +3694,7 @@ button,
   top: 30%;
   height: auto;
   z-index: 1;
-  right: 120px;
+  right: calc(50% - 600px);
 }
 @media (max-width: 1199px) {
   .hero__photo {
@@ -3698,6 +3703,7 @@ button,
     height: 300px;
     margin-left: 35%;
     top: 0%;
+    right: 120px;
   }
 }
 @media (max-width: 767px) {
@@ -3736,7 +3742,7 @@ button,
   position: absolute;
   left: auto;
   top: 38%;
-  right: 120px;
+  right: calc(50% - 600px);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3783,9 +3789,9 @@ button,
   position: absolute;
   top: 50%;
   left: 56%;
-  -webkit-transform: translate(-50%, -50%);
-      -ms-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  -webkit-transform: translate(-100%, -59%);
+      -ms-transform: translate(-100%, -59%);
+          transform: translate(-100%, -59%);
   color: transparent;
   border-radius: 50%;
   width: 56px;
@@ -3798,9 +3804,9 @@ button,
   }
 }
 .media__button svg {
-  -webkit-transform: translate(-55%, -5%);
-      -ms-transform: translate(-55%, -5%);
-          transform: translate(-55%, -5%);
+  -webkit-transform: translate(0%, 2%);
+      -ms-transform: translate(0%, 2%);
+          transform: translate(0%, 2%);
   fill: transparent;
   stroke: #ffffff;
 }
@@ -3845,7 +3851,7 @@ button,
   display: -ms-flexbox;
   display: flex;
   z-index: 2;
-  right: 120px;
+  right: calc(50% - 600px);
 }
 @media (max-width: 1199px) {
   .audio {
@@ -3854,6 +3860,7 @@ button,
     height: 220px;
     top: -80px;
     margin-left: 35%;
+    right: 120px;
   }
 }
 @media (max-width: 767px) {
@@ -4898,15 +4905,11 @@ button,
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
-  padding-top: 124px;
-  padding-left: 152px;
-  padding-right: 120px;
+  padding: 124px 120px 0 152px;
 }
 @media (max-width: 1199px) {
   .about__container {
-    padding-top: 68px;
-    padding-left: 76px;
-    padding-right: 45px;
+    padding: 68px 45px 0 76px;
   }
 }
 @media (max-width: 767px) {
@@ -4914,9 +4917,7 @@ button,
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
-    padding: 462px 15px 0;
-    padding-left: 15px;
-    padding-right: 15px;
+    padding: 462px 15px 0 15px;
   }
 }
 .about__photo {
@@ -5646,7 +5647,7 @@ button,
   width: 100%;
   padding: 0 calc(50% - 489px);
   padding-top: 21.6%;
-  padding-bottom: 21.3%;
+  padding-bottom: 22.3%;
   height: auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -5751,6 +5752,7 @@ button,
 }
 .faq__image {
   width: 100%;
+  height: 100%;
   position: absolute;
   top: 0;
   left: 0;
@@ -5762,6 +5764,7 @@ button,
   -o-object-position: center;
      object-position: center;
   width: 100%;
+  height: 100%;
 }
 .faq__input {
   display: -webkit-box;
@@ -5822,6 +5825,21 @@ button,
 .faq__input input:hover {
   outline: 1px solid #0266c1;
 }
+.faq__input input:hover::-webkit-input-placeholder {
+  color: #0266c1;
+}
+.faq__input input:hover::-moz-placeholder {
+  color: #0266c1;
+}
+.faq__input input:hover:-ms-input-placeholder {
+  color: #0266c1;
+}
+.faq__input input:hover::-ms-input-placeholder {
+  color: #0266c1;
+}
+.faq__input input:hover::placeholder {
+  color: #0266c1;
+}
 .faq__input input:focus, .faq__input input:active {
   outline: 1px solid #1c3374;
 }
@@ -5877,15 +5895,13 @@ button,
 @media (max-width: 1199px) {
   .contacts h2 {
     max-width: 768px;
-    padding: 0 45px;
-    padding-top: 80px;
+    padding: 80px 45px 0 45px;
   }
 }
 @media (max-width: 767px) {
   .contacts h2 {
     max-width: 320px;
-    padding: 0 15px;
-    padding-top: 63px;
+    padding: 63px 15px 0 15px;
   }
 }
 .contacts h2[data-content]::after {

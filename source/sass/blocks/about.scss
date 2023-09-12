@@ -4,21 +4,15 @@
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    padding-top: 124px;
-    padding-left: 152px;
-    padding-right: 120px;
+    padding: 124px 120px 0 152px;
 
     @include tablet-width {
-      padding-top: 68px;
-      padding-left: 76px;
-      padding-right: 45px;
+      padding: 68px 45px 0 76px;
     }
 
     @include mobile-width {
       align-items: flex-start;
-      padding: 462px 15px 0;
-      padding-left: 15px;
-      padding-right: 15px;
+      padding: 462px 15px 0 15px;
     }
   }
 
