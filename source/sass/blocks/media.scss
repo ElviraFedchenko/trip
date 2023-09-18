@@ -7,6 +7,10 @@
   width: 482px;
   height: 317px;
 
+  @media (min-width: 1200px) and (max-width: 1439px) {
+    right: 100px;
+  }
+
   @include tablet-width {
     position: relative;
     width: 442px;
@@ -47,12 +51,20 @@
     position: absolute;
     top: 50%;
     left: 56%;
-    transform: translate(-100%, -59%);
+    transform: translate(-104%, -52%);
     color: transparent;
     border-radius: 50%;
     width: 56px;
     height: 56px;
     cursor: pointer;
+    background-color: rgba(255, 255, 255, .2);
+
+    &:focus,
+    &:focus-visible {
+      stroke: $color-resolution-blue;
+      fill: $color-default-white;
+      outline: none;
+    }
 
     @include tablet-width {
       left: 57%;
@@ -64,9 +76,11 @@
       stroke: $color-default-white;
     }
 
-    &:hover circle {
+    &:hover svg,
+    &:focus svg {
       stroke: $color-resolution-blue;
-      fill-opacity: 0;
+      fill: $color-default-white;
+      outline: none;
     }
 
     &:hover path {
@@ -90,6 +104,7 @@
       stroke-opacity: 0;
     }
   }
+
 
   img {
     @include tablet-width {

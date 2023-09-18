@@ -23,7 +23,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
   // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'
   // в load следует добавить скрипты, не участвующие в работе первого экрана
-  window.addEventListener('load', () => {
+  window.addEventListener('load', {passive: true}, () => {
     initModals();
     const form = new Form();
     window.form = form;
@@ -156,7 +156,7 @@ const openMenu = function openMenu() {
   menuToggle.addEventListener('click', closeMenu);
 };
 
-menuToggle.addEventListener('click', openMenu);
+menuToggle.addEventListener('click', openMenu, {passive: true});
 
 
 const map = L.map('map', {scrollWheelZoom: false, dragging: false}).setView([55.813152, 37.633832], 13);

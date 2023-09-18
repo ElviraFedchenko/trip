@@ -2,12 +2,12 @@
   position: relative;
   width: 100%;
   max-width: 1440px;
-  margin: 0 auto;
   padding: 0 110px;
   padding-top: 103px;
+  margin: 0 auto;
+
 
   @include tablet-width {
-    max-width: 768px;
     padding: 0 35px;
     padding-top: 67px;
   }
@@ -23,13 +23,16 @@
 
   &__wrapper {
     padding-top: 32px;
+    padding-bottom: 41px;
 
     @include tablet-width {
       padding-top: 20px;
+      padding-bottom: 33px;
     }
 
     @include mobile-width {
       padding-top: 20px;
+      padding-bottom: 20px;
     }
   }
 
@@ -56,13 +59,14 @@
     color: $color-elephant;
     max-width: 70%;
     padding-top: 33px;
-
+    padding-bottom: 55px;
     margin-left: 10px;
 
 
     @include tablet-width {
       padding-top: 22px;
       max-width: 83%;
+      padding-bottom: 64px;
     }
 
     @include mobile-width {
@@ -70,6 +74,7 @@
       padding-top: 16px;
       font-size: 14px;
       line-height: 20px;
+      padding-bottom: 47px;
     }
   }
 
@@ -92,7 +97,6 @@
   }
 
   &__slider {
-    padding-top: 56px;
     padding-bottom: 40px;
 
     h3 {
@@ -102,40 +106,73 @@
     }
 
     @include tablet-width {
-      padding-top: 64px;
       padding-bottom: 32px;
     }
 
     @include mobile-width {
-      padding: 47px 5px 25px;
+      padding: 5px 5px 0;
     }
   }
 
 
   &__button {
-    top: 70px;
+    top: 296px;
 
     @include tablet-width {
-      top: 78px;
+      top: 270px;
     }
 
     @include mobile-width {
-      top: 60px;
+      top: 272px;
+    }
+
+    &--next,
+    &--prev {
+      position: absolute;
+      content: "";
+      top: 31%;
+      width: 37px;
+      height: 35px;
+      background-color: $color-navy-blue;
+      z-index: 55;
+      cursor: pointer;
+      border: none;
+
+      @media (min-width: 1200px) and (max-width: 1439px) {
+        top: 23.2%;
+      }
+
+      @include tablet-width {
+        top: 270px;
+        right: 45.5px;
+      }
+
+      @include mobile-width {
+        right: unset;
+      }
     }
 
     &--next {
-      right: 12px;
+      right: 122px;
 
       @include tablet-width {
-        right: 10px;
+        right: 45px;
+      }
+
+      @include mobile-width {
+        right: 15px;
       }
     }
 
     &--prev {
-      right: 55px;
+      right: 164px;
 
       @include tablet-width {
-        right: 50px;
+        right: 87px;
+      }
+
+      @include mobile-width {
+        right: 56px;
       }
     }
   }

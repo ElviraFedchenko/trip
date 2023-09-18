@@ -1,6 +1,6 @@
 .trainer-card {
   display: flex;
-  height: 100%;
+  height: auto;
 
   &__wrapper {
     margin: 10px;
@@ -13,16 +13,14 @@
     min-height: 377px;
 
     @include tablet-width {
-      margin: 10px auto;
-      width: 206px;
       min-height: 411px;
       padding: 15px;
     }
 
     @include mobile-width {
-      width: 95%;
+      width: 97%;
       min-height: 385px;
-      padding: 20px;
+      padding: 15px;
     }
 
     p {

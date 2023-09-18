@@ -9,9 +9,44 @@
     padding-top: 0;
   }
 
+  &__top {
+    position: relative;
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 118px;
+
+    @include tablet-width {
+      padding: 0;
+    }
+
+    p {
+      padding: 0 calc(50% - 600px);
+      width: 63%;
+      padding-bottom: 45px;
+      color: $color-elephant;
+
+      @include tablet-width {
+        padding-left: 45px;
+        padding-bottom: 36px;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 22px;
+        width: 56%;
+      }
+
+      @include mobile-width {
+        width: 100%;
+        padding-left: 15px;
+        padding-bottom: 64px;
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 18px;
+      }
+    }
+  }
 
   h2 {
-    padding: 0 calc(50% - 600px);
     padding-bottom: 26px;
 
     @include tablet-width {
@@ -39,33 +74,6 @@
         font-weight: 800;
         line-height: 26px;
         margin-left: -160px;
-      }
-    }
-  }
-
-  &__slider {
-    p {
-      padding: 0 calc(50% - 600px);
-      width: 68%;
-      padding-bottom: 45px;
-      color: $color-elephant;
-
-      @include tablet-width {
-        padding-left: 45px;
-        padding-bottom: 36px;
-        font-size: 14px;
-        font-weight: 400;
-        line-height: 22px;
-        width: 56%;
-      }
-
-      @include mobile-width {
-        width: 100%;
-        padding-left: 15px;
-        padding-bottom: 64px;
-        font-size: 12px;
-        font-weight: 400;
-        line-height: 18px;
       }
     }
   }
@@ -110,14 +118,14 @@
   }
 
   &__button {
-    top: 26px;
+    top: 94px;
 
     @include tablet-width {
-      top: 33px;
+      top: 56%;
     }
 
     @include mobile-width {
-      top: 108px;
+      top: 85%;
     }
 
     &--prev {

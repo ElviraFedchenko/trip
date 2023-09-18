@@ -7878,7 +7878,7 @@ const swiper = () => {
       }
 
       function makeElFocusable($el) {
-        $el.attr('tabIndex', '-1');
+        $el.attr('tabIndex', '0');
       }
 
       function makeElNotFocusable($el) {

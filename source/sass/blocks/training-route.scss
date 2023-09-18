@@ -6,13 +6,17 @@
     position: relative;
     margin-left: 10px;
 
+    @include tablet-width {
+      max-width: 685px;
+    }
+
     @include mobile-width {
-      margin-left: 14px;
+      margin-left: 10px;
     }
 
     h3 {
       @include mobile-width {
-        margin-left: 14px;
+        margin-left: 10px;
       }
     }
 
@@ -184,8 +188,9 @@
     svg {
       width: 25px;
       height: 25px;
-      align-self: center;
+      align-self: end;
       justify-self: center;
+      margin-bottom: 13px;
 
       @include mobile-width {
         width: 19px;

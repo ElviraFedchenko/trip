@@ -198,4 +198,4 @@ const initGallerySwiper = () => {
 };
 
 
-export {initHeroSwiper, initToursSwiper, initTrainerSwiper, initReviewSwiper, initAdvantagesSwiper, initGallerySwiper};
+export { initHeroSwiper, initToursSwiper, initTrainerSwiper, initReviewSwiper, initAdvantagesSwiper, initGallerySwiper };

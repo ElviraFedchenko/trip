@@ -1,13 +1,16 @@
 .contacts {
   h2 {
-    width: 100%;
-    padding: 0 calc(50% - 600px);
     padding-bottom: 22px;
     padding-top: 76px;
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 76px 118px 22px 118px;
 
     @include tablet-width {
       max-width: 768px;
       padding: 80px 45px 0 45px;
+      margin: 0;
     }
 
     @include mobile-width {
@@ -77,6 +80,7 @@
       gap: 40px;
       padding-top: 18px;
       padding-bottom: 68px;
+      max-width: 100%;
     }
 
     @include mobile-width {
@@ -96,6 +100,7 @@
       flex-direction: row;
       gap: 44px;
       align-items: baseline;
+      flex-wrap: wrap;
     }
 
     @include mobile-width {
