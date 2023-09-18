@@ -3,6 +3,7 @@
 
   &__wrapper {
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-between;
     padding-top: 30px;
@@ -37,9 +38,14 @@
     column-gap: 33px;
     row-gap: 10px;
     margin: 0 63px 0 0;
+    min-width: 760px;
 
+    @media (min-width: 1200px) and (max-width: 1439px) {
+      margin: 0;
+    }
 
     @include tablet-width {
+      min-width: 400px;
       font-size: 14px;
       line-height: 14px;
       margin: 0;
@@ -48,6 +54,7 @@
     }
 
     @include mobile-width {
+      min-width: 280px;
       display: block;
       column-count: 2;
       column-gap: 20px;
@@ -130,7 +137,7 @@
     }
 
     &:disabled {
-      color: rgba(2, 102, 193, 0.1);
+      color: rgba(255, 255, 255, 0.1);
     }
 
     @include tablet-width {
@@ -159,6 +166,11 @@
 
     @include tablet-width {
       margin-right: 0;
+    }
+
+    &:focus,
+    &:focus-visible {
+      outline: none;
     }
   }
 }

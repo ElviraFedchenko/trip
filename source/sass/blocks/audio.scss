@@ -12,9 +12,8 @@
     position: relative;
     width: 340px;
     height: 220px;
-    top: -80px;
-    margin-left: 35%;
-    right: 120px;
+    top: -61px;
+    right: 0;
   }
 
   @include mobile-width {
@@ -30,7 +29,7 @@
   &__wrapper {
     display: flex;
     flex-direction: column;
-    padding: 42px 38px 36px;
+    padding: 39px 38px 35px;
     width: 100%;
     background-color: rgba(245, 246, 250, 0.9);
     border: 2px solid $color-default-white;
@@ -54,19 +53,24 @@
   }
 
   &__top {
-    padding-bottom: 10px;
+    padding-bottom: 2px;
 
     p {
       padding: 0;
       margin: 0;
+
+      @include tablet-width {
+        gap: 14px;
+        display: flex;
+      }
     }
   }
 
   &__inner {
     display: flex;
     width: 100%;
-    padding-top: 5px;
     justify-content: space-between;
+    padding-bottom: 5px;
   }
 
   &__author {
@@ -78,6 +82,11 @@
     font-size: 22px;
     padding-bottom: 4px;
     color: $color-resolution-blue;
+    text-align: start;
+
+    @include tablet-width {
+      padding-bottom: 1px;
+    }
   }
 
   &__scale {

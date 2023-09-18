@@ -4,10 +4,10 @@
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    padding: 124px 120px 0 152px;
+    padding: 83px 120px 0 152px;
 
     @include tablet-width {
-      padding: 68px 45px 0 76px;
+      padding: 34px 45px 0 76px;
     }
 
     @include mobile-width {
@@ -20,14 +20,14 @@
     position: absolute;
     z-index: -1;
     left: 0;
-    top: 95px;
+    top: 55px;
     width: 808px;
     height: 474px;
 
     @include tablet-width {
       width: 685px;
       height: 402px;
-      top: 77px;
+      top: 47px;
       left: -211px;
       right: auto;
     }

@@ -1,6 +1,7 @@
 .main-nav {
   @include tablet-width {
     &--is-active {
+
       & .main-nav__logo svg,
       & .main-nav__phone {
         color: $color-elephant;
@@ -31,6 +32,16 @@
   &__logo svg {
     color: $color-default-white;
 
+    &:hover,
+    &:focus {
+      outline: none;
+      color: $color-resolution-blue;
+    }
+
+    &:active {
+      color: $color-navy-blue;
+    }
+
     @include tablet-width {
       width: 144px;
       height: 44px;
@@ -45,21 +56,16 @@
   &__container {
     width: 100%;
     display: grid;
-    grid-template-columns: 205px 1fr 164px;
+    grid-template-columns: 220px 1fr;
     justify-content: space-between;
 
     @include tablet-width {
-      grid-template-columns: 1fr 164px;
-    }
-
-    @include mobile-width {
-      grid-template-columns: 1fr;
+      display: block;
     }
   }
 
   &__inner {
-    padding: 0 0 0 13px;
-    margin: 0;
+    margin: 20px 0;
     width: 100%;
     display: flex;
     flex-wrap: wrap;
@@ -73,8 +79,8 @@
         display: block;
         position: fixed;
         z-index: -1;
-        top: 0;
-        bottom: 0;
+        top: 50px;
+        bottom: -50px;
         left: 0;
         right: 0;
         overflow: hidden;
@@ -108,14 +114,25 @@
     z-index: 3;
     width: 100%;
 
+    @media (min-width: 1200px) and (max-width: 1439px) {
+      padding-left: 120px;
+      padding-right: 100px;
+    }
+
     @include tablet-width {
       padding: 30px 16px 0 45px;
+      padding: 30px 16px 0 45px;
+      display: grid;
+      grid-template-columns: 67px 1fr 161px;
+      column-gap: 22%;
     }
 
     @include mobile-width {
-      grid-template-columns: 26px 1fr;
       align-items: flex-start;
       padding: 15px 15px 0 15px;
+      grid-template-columns: min-content 1fr;
+      justify-items: end;
+      column-gap: 52%;
     }
   }
 
@@ -125,27 +142,26 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
     color: $color-default-white;
     font-weight: 400;
-    column-gap: 32px;
+    column-gap: 28px;
     row-gap: 10px;
 
     @include tablet-width {
       display: block;
-      padding: 124px 45px 44px 45px;
+      padding: 52px 45px 44px 45px;
       background-color: $color-default-white;
     }
 
     @include mobile-width {
-      padding: 124px 15px 38px 15px;
+      padding: 24px 15px 33px 15px;
     }
   }
 
   &__logo {
     @include tablet-width {
       order: 2;
-      margin-left: 242px;
+      margin-left: 24%;
     }
 
     @include mobile-width {
@@ -155,12 +171,13 @@
   }
 
   &__item {
+
     @include tablet-width {
-      padding-bottom: 26px;
+      padding-bottom: 18px;
     }
 
     @include mobile-width {
-      padding-bottom: 22px;
+      padding-bottom: 12px;
     }
   }
 
@@ -171,7 +188,7 @@
     font-size: 16px;
     line-height: 16px;
     position: relative;
-
+    letter-spacing: 0.56px;
 
     &:hover {
       &::before {
@@ -221,6 +238,7 @@
     font-size: 18px;
     line-height: 18px;
     padding: 25px 10px 20px;
+    min-width: 163px;
 
     @include tablet-width {
       font-size: 16px;

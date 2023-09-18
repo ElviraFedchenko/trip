@@ -54,6 +54,7 @@
     padding-bottom: 40px;
     color: $color-default-white;
     margin-left: -1.5%;
+    z-index: 2;
 
     @include tablet-width {
       font-size: 16px;
@@ -187,6 +188,22 @@
       width: 100%;
       margin-top: 1px;
       padding: 18px 30px;
+    }
+
+    &:focus {
+      outline: none;
+    }
+
+    &:hover,
+    &:focus-visible {
+      background-color: $color-default-white;
+      outline: 1px solid $color-resolution-blue;
+      color: $color-resolution-blue;
+    }
+
+    &:active {
+      background-color: $color-resolution-blue;
+      color: $color-default-white;
     }
   }
 }

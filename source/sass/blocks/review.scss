@@ -1,6 +1,5 @@
 .review {
   position: relative;
-  padding-left: calc(50% - 610px);
 
   @include tablet-width {
     padding-left: 35px;
@@ -13,9 +12,14 @@
 
 
   &__slider {
-    padding-top: 114px;
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 114px 0 0 110px;
+    overflow: visible;
 
     @include tablet-width {
+      padding: 0;
       padding-top: 83px;
     }
 
@@ -90,9 +94,6 @@
   }
 
   &__description {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
     padding: 14px 0;
 
     @include tablet-width {
@@ -122,6 +123,28 @@
       }
     }
   }
+
+  &__comment {
+    margin-bottom: 18px;
+
+
+    @include tablet-width {
+      margin-bottom: 16px;
+    }
+
+    @include mobile-width {
+      margin-bottom: 0;
+    }
+
+    &--second {
+      margin-bottom: 40px;
+
+      @include tablet-width {
+        margin-bottom: 16px;
+      }
+    }
+  }
+
 
   &__button {
     top: 130px;

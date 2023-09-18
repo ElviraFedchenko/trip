@@ -11,4 +11,23 @@
   @include mobile-width {
     margin-right: 12px;
   }
+
+  &:hover,
+  &:focus {
+    outline: none;
+    border: 1px solid $color-default-black;
+  }
+
+  &:active {
+    background-color: $color-navy-blue;
+    color: $color-default-white;
+    border: none;
+  }
+
+  &:disabled {
+    background-color: $color-default-white;
+    border-color: $color-elephant;
+    color: $color-elephant;
+    opacity: 0.3;
+  }
 }
