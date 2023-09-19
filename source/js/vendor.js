@@ -1,7 +1,6 @@
 // Swiper 7.4.1
 import './vendor/swiper';
 import './vendor/focus-visible-polyfill';
-
 const heroSwiper = document.querySelector('.hero__slider');
 const toursSwiper = document.querySelector('.tours__slider');
 const trainerSwiper = document.querySelector('.training__slider');
@@ -26,6 +25,14 @@ const initHeroSwiper = () => {
         1199: {
           slidesPerView: 1,
           allowTouchMove: false,
+        },
+      },
+      on: {
+        slideChange() {
+          if (document.querySelector('.media__video--enabled iframe')) {
+            document.querySelector('.media__video--enabled iframe').remove();
+            document.querySelector('.media__button').remove();
+          }
         },
       },
 
@@ -198,4 +205,4 @@ const initGallerySwiper = () => {
 };
 
 
-export { initHeroSwiper, initToursSwiper, initTrainerSwiper, initReviewSwiper, initAdvantagesSwiper, initGallerySwiper };
+export {initHeroSwiper, initToursSwiper, initTrainerSwiper, initReviewSwiper, initAdvantagesSwiper, initGallerySwiper};

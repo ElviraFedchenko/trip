@@ -59,13 +59,6 @@
     cursor: pointer;
     background-color: rgba(255, 255, 255, .2);
 
-    &:focus,
-    &:focus-visible {
-      stroke: $color-resolution-blue;
-      fill: $color-default-white;
-      outline: none;
-    }
-
     @include tablet-width {
       left: 57%;
     }
@@ -76,10 +69,13 @@
       stroke: $color-default-white;
     }
 
-    &:hover svg,
-    &:focus svg {
+    &:hover circle,
+    &:focus circle {
       stroke: $color-resolution-blue;
-      fill: $color-default-white;
+      fill-opacity: 0;
+    }
+
+    &:focus {
       outline: none;
     }
 
@@ -88,15 +84,12 @@
       stroke-opacity: 1;
     }
 
-    &:active svg {
+    &:active {
       color: $color-resolution-blue;
-      stroke: $color-resolution-blue;
     }
 
     &:active circle {
       fill-opacity: 1;
-      color: $color-resolution-blue;
-      stroke: $color-resolution-blue;
     }
 
     &:active path {

@@ -9,15 +9,29 @@
     padding-top: 0;
   }
 
+  &__slider {
+    padding-top: 120px;
+
+    @include tablet-width {
+      padding-top: 122px;
+    }
+
+    @include mobile-width {
+      padding-top: 153px;
+    }
+  }
+
   &__top {
     position: relative;
     width: 100%;
     max-width: 1440px;
     margin: 0 auto;
     padding: 0 118px;
+    margin-bottom: -120px;
 
     @include tablet-width {
       padding: 0;
+      margin-bottom: -124px;
     }
 
     p {
@@ -38,7 +52,6 @@
       @include mobile-width {
         width: 100%;
         padding-left: 15px;
-        padding-bottom: 64px;
         font-size: 12px;
         font-weight: 400;
         line-height: 18px;
@@ -118,14 +131,14 @@
   }
 
   &__button {
-    top: 94px;
+    top: 54px;
 
     @include tablet-width {
-      top: 56%;
+      top: 56px;
     }
 
     @include mobile-width {
-      top: 85%;
+      top: 125px;
     }
 
     &--prev {

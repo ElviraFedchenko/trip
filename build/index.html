@@ -59,8 +59,8 @@
               </li>
             </ul>
           </nav>
+          <a class="main-nav__phone" href="tel:88007253232">8 800 725 32 32</a>
         </div>
-        <a class="main-nav__phone" href="tel:88007253232">8 800 725 32 32</a>
       </div>
       <div class="hero">
         <div class="hero__slider swiper">
@@ -96,15 +96,16 @@
                   <source media="(min-width: 1200px)"
                     srcset="img/background/video-bg.jpg 1x, img/background/video-bg@2x.jpg 2x">
                   <source media="(min-width: 768px)"
-                    srcset="img/background/video-bg-tablet.jpg 1x, img/background/video-bg-tablet@2x.jpg 2x"
-                    width="442" height="300">
+                    srcset="img/background/video-bg-tablet.jpg 1x, img/background/video-bg-tablet@2x.jpg 2x" width="442"
+                    height="300">
                   <img class="media__img" src="img/background/video-bg.jpg" srcset="img/background/video-bg@2x.jpg 2x"
                     alt="Вершина Кавказа" width="482" height="317" loading="lazy">
                 </picture>
                 <a class="media__link" href="https://www.youtube.com/watch?v=9TZXsZItgdw"></a>
                 <div class="media__button" tabindex="0" aria-label="Запустить видеоплеер.">
-                  <svg width="56" height="56">
-                    <use xlink:href="img/sprite.svg#media-play"></use>
+                  <svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="28" cy="28" r="27.5" fill="currentColor" fill-opacity="0.2" stroke="white" />
+                    <path d="M37 28L25 17V39L37 28Z" fill="white" stroke="white" stroke-opacity="0" />
                   </svg>
                 </div>
               </div>
@@ -204,7 +205,7 @@
                   </svg>Легкая сложность</span>
               </div>
               <div class="hero__audio audio">
-                <div class="audio__container">
+                <div class="audio__container" data-is-playing>
                   <div class="audio__wrapper audio__wrapper--enabled">
                     <div class="audio__top">
                       <p><span class="audio__name">Алтай</span></p>
@@ -234,19 +235,19 @@
                         <use xlink:href="img/sprite.svg#audio-order"></use>
                       </svg>
                       <div class="audio__buttons">
-                        <button class="audio__button-prev" type="button" tabindex="-1">
+                        <button class="audio__button-prev" type="button" tabindex="0">
                           <span class="visually-hidden">Предыдущий трек</span>
                           <svg width="22" height="22">
                             <use xlink:href="img/sprite.svg#audio-prev"></use>
                           </svg>
                         </button>
-                        <button class="audio__button-play" type="button" tabindex="-1">
+                        <button class="audio__button-play" type="button" tabindex="0">
                           <span class="visually-hidden">Включить трек</span>
                           <svg width="47" height="47">
                             <use xlink:href="img/sprite.svg#audio-play"></use>
                           </svg>
                         </button>
-                        <button class="audio__button-next" type="button" tabindex="-1">
+                        <button class="audio__button-next" type="button" tabindex="0">
                           <span class="visually-hidden">Следующий трек</span>
                           <svg width="22" height="22">
                             <use xlink:href="img/sprite.svg#audio-next"></use>
@@ -1549,20 +1550,7 @@
           <h2 data-content="Фотогалерея">Фотогалерея</h2>
           <p>Добавляйте фото в&nbsp;Instagram с&nbsp;хэштегом #лайфтур, а&nbsp;также отмечайте нас на&nbsp;фото.
             Лучшие фотографии украсят этот раздел нашего сайта.</p>
-          <div
-            class="gallery__button button gallery__button--prev swiper-button swiper-button--prev swiper-button-prev">
-            <span class="visually-hidden">Предыдущий слайд</span>
-            <svg width="14" height="8" fill="currentColor">
-              <use xlink:href="img/sprite.svg#arrow-prev"></use>
-            </svg>
-          </div>
-          <div
-            class="gallery__button button gallery__button--next swiper-button swiper-button--next swiper-button-next">
-            <span class="visually-hidden">Предыдущий слайд</span>
-            <svg width="14" height="8" fill="currentColor">
-              <use xlink:href="img/sprite.svg#arrow-next"></use>
-            </svg>
-          </div>
+
         </div>
         <div class="gallery__slider swiper">
           <div class="gallery__wrapper swiper-wrapper">
@@ -1690,6 +1678,20 @@
                 </picture>
               </div>
             </div>
+          </div>
+          <div
+            class="gallery__button button gallery__button--prev swiper-button swiper-button--prev swiper-button-prev">
+            <span class="visually-hidden">Предыдущий слайд</span>
+            <svg width="14" height="8" fill="currentColor">
+              <use xlink:href="img/sprite.svg#arrow-prev"></use>
+            </svg>
+          </div>
+          <div
+            class="gallery__button button gallery__button--next swiper-button swiper-button--next swiper-button-next">
+            <span class="visually-hidden">Предыдущий слайд</span>
+            <svg width="14" height="8" fill="currentColor">
+              <use xlink:href="img/sprite.svg#arrow-next"></use>
+            </svg>
           </div>
         </div>
       </section>
