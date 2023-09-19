@@ -2,7 +2,7 @@ import { iosVhFix } from './utils/ios-vh-fix';
 import { initModals } from './modules/modals/init-modals';
 import { Form } from './modules/form-validate/form';
 import { initHeroSwiper, initToursSwiper, initTrainerSwiper, initReviewSwiper, initAdvantagesSwiper, initGallerySwiper } from './vendor.js';
-import  './vendor/leaflet';
+import './vendor/leaflet';
 // ---------------------------------
 
 
@@ -23,13 +23,14 @@ window.addEventListener('DOMContentLoaded', () => {
 
   // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'
   // в load следует добавить скрипты, не участвующие в работе первого экрана
-  window.addEventListener('load', {passive: true}, () => {
+  window.addEventListener('load', { passive: true }, () => {
     initModals();
     const form = new Form();
     window.form = form;
     form.init();
   });
 });
+
 
 window.addEventListener('DOMContentLoaded', function () {
   let video = document.querySelector('.media');
@@ -46,10 +47,13 @@ window.addEventListener('DOMContentLoaded', function () {
     video.classList.add('media__video--enabled');
   }
 
+
+
   function createIframe() {
     let iframe = document.createElement('iframe');
     iframe.setAttribute('allowfullscreen', '');
     iframe.setAttribute('allow', 'autoplay');
+    iframe.loading = 'lazy';
     iframe.setAttribute('src', 'https://www.youtube.com/embed/9TZXsZItgdw');
     iframe.classList.add('media__content');
     return iframe;
@@ -156,14 +160,15 @@ const openMenu = function openMenu() {
   menuToggle.addEventListener('click', closeMenu);
 };
 
-menuToggle.addEventListener('click', openMenu, {passive: true});
+menuToggle.addEventListener('click', openMenu, { passive: true });
 
 
-const map = L.map('map', {scrollWheelZoom: false, dragging: false}).setView([55.813152, 37.633832], 13);
+const map = L.map('map', { scrollWheelZoom: false, dragging: false }).setView([55.813152, 37.633832], 13);
 
 L.tileLayer(
   'https://tile.openstreetmap.org/{z}/{x}/{y}.png',
-  { maxZoom: 19,
+  {
+    maxZoom: 19,
     attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
   },
 ).addTo(map);
@@ -185,3 +190,4 @@ const marker = L.marker({
 },
 );
 marker.addTo(map);
+

@@ -56,11 +56,12 @@
   &__container {
     width: 100%;
     display: grid;
-    grid-template-columns: 220px 1fr;
+    grid-template-columns: 220px auto 162px;
     justify-content: space-between;
 
     @include tablet-width {
-      display: block;
+      display: flex;
+      flex-wrap: wrap;
     }
   }
 
@@ -122,9 +123,7 @@
     @include tablet-width {
       padding: 30px 16px 0 45px;
       padding: 30px 16px 0 45px;
-      display: grid;
-      grid-template-columns: 67px 1fr 161px;
-      column-gap: 22%;
+      column-gap: 14%;
     }
 
     @include mobile-width {
