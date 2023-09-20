@@ -233,4 +233,12 @@
       margin-bottom: 48px;
     }
   }
+
+  &__description .hero__inner {
+    display: none;
+  }
+
+  &__description.swiper-slide-active .hero__inner {
+    display: block;
+  }
 }

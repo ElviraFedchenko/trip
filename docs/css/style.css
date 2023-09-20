@@ -3844,6 +3844,12 @@ button,
     margin-bottom: 48px;
   }
 }
+.hero__description .hero__inner {
+  display: none;
+}
+.hero__description.swiper-slide-active .hero__inner {
+  display: block;
+}
 
 .media {
   position: absolute;
