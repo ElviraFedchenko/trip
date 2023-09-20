@@ -8,6 +8,10 @@
   z-index: 2;
   right: calc(50% - 600px);
 
+  @media (min-width: 1200px) and (max-width: 1439px) {
+    right: 100px;
+  }
+
   @include tablet-width {
     position: relative;
     width: 340px;
