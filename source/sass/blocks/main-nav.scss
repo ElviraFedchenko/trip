@@ -1,7 +1,6 @@
 .main-nav {
   @include tablet-width {
     &--is-active {
-
       & .main-nav__logo svg,
       & .main-nav__phone {
         color: $color-elephant;
@@ -60,8 +59,16 @@
     justify-content: space-between;
 
     @include tablet-width {
+      display: grid;
+      grid-template-columns: 220px 162px;
+    }
+
+    @include mobile-width {
       display: flex;
+      flex-direction: column;
       flex-wrap: wrap;
+      justify-content: end;
+      max-width: 120px;
     }
   }
 
@@ -121,9 +128,8 @@
     }
 
     @include tablet-width {
-      padding: 30px 16px 0 45px;
-      padding: 30px 16px 0 45px;
-      column-gap: 14%;
+      padding: 30px 10px 0 45px;
+      column-gap: 34%;
     }
 
     @include mobile-width {
@@ -160,7 +166,6 @@
   &__logo {
     @include tablet-width {
       order: 2;
-      margin-left: 24%;
     }
 
     @include mobile-width {
@@ -170,7 +175,6 @@
   }
 
   &__item {
-
     @include tablet-width {
       padding-bottom: 18px;
     }
@@ -236,21 +240,23 @@
     font-weight: 600;
     font-size: 18px;
     line-height: 18px;
-    padding: 25px 10px 20px;
+    padding: 0;
+    display: flex;
+    align-items: center;
     min-width: 163px;
+    grid-column: 3;
 
     @include tablet-width {
       font-size: 16px;
       line-height: 16px;
       order: 3;
-      padding: 15px 10px 10px;
+      grid-column: 2;
     }
 
     @include mobile-width {
       font-size: 14px;
       line-height: 14px;
       padding: 0;
-      grid-area: 2 / 2 / 2 / 2;
     }
 
     &:hover,

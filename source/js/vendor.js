@@ -8,14 +8,12 @@ const reviewSwiper = document.querySelector('.review__slider');
 const advantagesSwiper = document.querySelector('.advantages__slider');
 const gallerySwiper = document.querySelector('.gallery__slider');
 
-
 const initHeroSwiper = () => {
   if (heroSwiper) {
     const swiper = new Swiper(heroSwiper, {
       simulateTouch: false,
       grabCursor: false,
       watchOverflow: true,
-      loop: true,
       keyboard: true,
       focusableElements: true,
 
@@ -31,7 +29,6 @@ const initHeroSwiper = () => {
         slideChange() {
           if (document.querySelector('.media__video--enabled iframe')) {
             document.querySelector('.media__video--enabled iframe').remove();
-            document.querySelector('.media__button').remove();
           }
         },
       },

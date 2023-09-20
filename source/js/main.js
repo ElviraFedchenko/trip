@@ -30,6 +30,12 @@ window.addEventListener('DOMContentLoaded', () => {
     form.init();
   });
 });
+const button = document.querySelector('.media__button');
+
+const showButton = () => {
+  button.style.display = 'block';
+};
+
 
 
 window.addEventListener('DOMContentLoaded', function () {
@@ -45,6 +51,7 @@ window.addEventListener('DOMContentLoaded', function () {
       video.appendChild(iframe);
     });
     video.classList.add('media__video--enabled');
+
   }
 
 
@@ -58,7 +65,6 @@ window.addEventListener('DOMContentLoaded', function () {
     iframe.classList.add('media__content');
     return iframe;
   }
-
   setupVideo();
 });
 

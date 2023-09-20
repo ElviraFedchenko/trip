@@ -3,7 +3,6 @@
     display: flex;
     position: relative;
     flex-direction: column;
-    margin: 0;
     max-width: 1440px;
     margin: 0 auto;
 
@@ -105,8 +104,6 @@
     font-weight: 500;
     min-height: 412px;
 
-    @include tablet-width {}
-
     @include mobile-width {
       max-width: 100%;
       margin: 0 auto;
@@ -118,7 +115,7 @@
       height: 100%;
       position: absolute;
       inset: 0;
-      background: linear-gradient(0deg, rgba(0, 0, 0, 0.60) 22.3%, rgba(0, 0, 0, 0.00) 60.32%);
+      background: linear-gradient(0deg, rgba(0, 0, 0, 0.6) 22.3%, rgba(0, 0, 0, 0) 60.32%);
       z-index: -1;
     }
   }
