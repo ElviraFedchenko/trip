@@ -17,6 +17,9 @@
     height: 300px;
     right: 0;
     top: 0%;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
   }
 
   @include mobile-width {
