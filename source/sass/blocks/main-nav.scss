@@ -1,7 +1,6 @@
 .main-nav {
   @include tablet-width {
     &--is-active {
-
       & .main-nav__logo svg,
       & .main-nav__phone {
         color: $color-elephant;
