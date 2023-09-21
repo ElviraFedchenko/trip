@@ -14,21 +14,19 @@
     background-color: $color-torch-red;
   }
 
-  &:hover,
-  &:focus {
+  @include hover-focus {
     background-color: $color-default-white;
     box-shadow: 0 0 0 1px $color-resolution-blue;
     color: $color-resolution-blue;
     outline: none;
   }
 
-  &:active {
+  @include active {
     background-color: $color-resolution-blue;
     color: $color-default-white;
-    box-shadow: none;
   }
 
-  &:disabled {
+  &[disabled]:hover {
     background: rgba(2, 102, 193, 0.1);
     color: $color-default-white;
     pointer-events: none;
